@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<registry>
+    <records interface="collective.blog.interfaces.IBlogSettings" delete="True" />
+
+    <records prefix="plone.resources/collective.blog"
+          interface='Products.CMFPlone.interfaces.IResourceRegistry' delete="True" />
+
+</registry>

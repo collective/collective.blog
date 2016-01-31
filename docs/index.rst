@@ -1,0 +1,5 @@
+====================
+collective.blog
+====================
+
+User documentation

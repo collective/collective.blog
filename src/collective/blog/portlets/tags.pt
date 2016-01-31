@@ -1,0 +1,30 @@
+<section class="portlet portletTagCloud"
+	i18n:domain="collective.blog">
+
+	<header
+		tal:define="header view/data/header"
+		tal:attributes="class python:header and 'portletHeader' or 'portletHeader titleless'"
+		tal:condition="view/has_header"
+		tal:content="header">
+	</header>
+
+	<section
+		class="tagsPortletContent"
+		tal:define="subjects view/subjects">
+		<ul>
+			<li tal:repeat="subject subjects">
+				<a
+					tal:attributes="style string:font-size: ${subject/font_size}em;
+		                           href string:${view/subjects_root_url}/?tags=${subject/title}"
+					tal:content="subject/title" />
+			</li>
+		</ul>
+	</section>
+
+	<footer
+		class="portletFooter"
+		tal:condition="view/has_footer"
+		tal:content="view/data/footer">
+	</footer>
+
+</section>
