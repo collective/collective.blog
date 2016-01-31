@@ -82,18 +82,19 @@ you to archive your content (based on `sc.contentrules.groupbydate <https://gith
 
 Blog Listing supports some request parameters:
 
-   - **SearchableText**: Any Text
+- **tags**: A subject
+- **SearchableText**: Any Text
 
-   Date range:
+Date range:
 
-   - **start**: The start date to search for, as example: 2015-09-01
-   - **end**: The end date to search for, as example: 2015-09-30, if omitted it searches until today.
+- **start**: The start date to search for, as example: 2015-09-01
+- **end**: The end date to search for, as example: 2015-09-30, if omitted it searches until today.
 
-   Or by `year`, `year and month` or `year, month and day`
+Or by `year`, `year and month` or `year, month and day`
 
-   - **year**: The Year
-   - **month**: The month, can be omitted then it will search for the whole year
-   - **day**: The day, if bove the year and month have been given show only this day, can be omitted then it searches for the whole month.
+- **year**: The Year
+- **month**: The month, can be omitted then it will search for the whole year
+- **day**: The day, if bove the year and month have been given show only this day, can be omitted then it searches for the whole month.
 
 
 Portlets
@@ -109,7 +110,7 @@ It supports these parameters:
   - **Max. Fontsize**: Max. font size in em.
   - **Min. Fontsize**: Min. font size in em.
 
-  - **Search base**: Select search base Folder to search for tags. The URL to to this item will also be used to link to in tag searches. 
+  - **Search base**: Select search base Folder to search for tags. The URL to to this item will also be used to link to in tag searches.
 		     If empty, the whole site will be searched and the tag cloud view will be called on the site root.
 
 
@@ -121,7 +122,21 @@ not uninstall the package dependencies.
 Make sure to uninstall the dependencies if you no longer use them.
 
 
-Copyright
-=========
+Contribute
+----------
 
-``collective.blog`` is licensed under GNU General Public License, version 2.
+- Issue Tracker: https://github.com/collective/collective.blog/issues
+- Source Code: https://github.com/collective/collective.blog
+
+
+Support
+-------
+
+If you are having issues, please let me know.
+
+
+License
+-------
+
+The project is licensed under the GPLv2.
+
