@@ -99,8 +99,18 @@ Blog Listing supports some request parameters:
 Portlets
 ========
 
-Subject cloud
--------------
+Tagcloud
+--------
+
+A portlet to show all tags in a cloud.
+
+It supports these parameters:
+
+  - **Max. Fontsize**: Max. font size in em.
+  - **Min. Fontsize**: Min. font size in em.
+
+  - **Search base**: Select search base Folder to search for tags. The URL to to this item will also be used to link to in tag searches. 
+		     If empty, the whole site will be searched and the tag cloud view will be called on the site root.
 
 
 Uninstall
@@ -113,7 +123,5 @@ Make sure to uninstall the dependencies if you no longer use them.
 
 Copyright
 =========
-
-This package is copyrighted by the `Webmeisterei <http://webmeisterei.com>`_.
 
 ``collective.blog`` is licensed under GNU General Public License, version 2.

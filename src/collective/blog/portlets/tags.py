@@ -234,7 +234,7 @@ class EditForm(base.EditForm):
     schema = ITagsPortlet
     label = _(
         u"title_edit_tags_portlet",
-        default=u"Edit Tag Clout portlet"
+        default=u"Edit Tag Cloud portlet"
     )
     description = _(
         u"description_tags_portlet",
