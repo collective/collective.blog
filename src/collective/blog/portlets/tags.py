@@ -36,7 +36,7 @@ class ITagsPortlet(IPortletDataProvider):
                 default=u"Portlet header"),
         description=_(u'portlet_tags_title_help',
                       default=u"Title of the rendered portlet"),
-        constraint=re.compile("[^\s]").match,
+        constraint=re.compile(r"[^\s]").match,
         required=False)
 
     maxsize = schema.Decimal(title=_(u'portlet_tags_maxsize_label',
@@ -153,9 +153,8 @@ class Renderer(base.Renderer):
 
             for subject, occurences in six.iteritems(subjects):
                 try:
-                    size = float((maxsize *
-                                 (occurences - minimal))) / \
-                                 float((maximal - minimal))
+                    size = (float((maxsize * (occurences - minimal)))
+                            / float((maximal - minimal)))
                 except ZeroDivisionError:
                     size = 1
                 if occurences <= minimal or size < minsize:
@@ -163,8 +162,7 @@ class Renderer(base.Renderer):
 
                 result.append({'title': subject, 'font_size': size})
 
-            result.sort(lambda x, y: cmp(x['title'].lower(),
-                                         y['title'].lower()))
+            result.sort(key=lambda x: x['title'].lower())
 
         return result
 

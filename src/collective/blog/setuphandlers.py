@@ -10,7 +10,7 @@ PROFILE_ID = 'profile-collective.blog:default'
 
 INDEXES = (
     ("Summary", "FieldIndex"),
-    )
+)
 
 
 @implementer(INonInstallable)
