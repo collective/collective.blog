@@ -20,7 +20,7 @@ long_description = (
 setup(
     name='collective.blog',
     version='1.0a1',
-    description="Blog Addon for Plone 5.",
+    description="A blog addon for Plone 5.",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
