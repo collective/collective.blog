@@ -1,1 +1,2 @@
 - Rene Jochum, rene@jochums.at
+- Hartmut Goebel, h.goebel@crazy-compilers.com
