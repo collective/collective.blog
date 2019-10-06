@@ -3,17 +3,21 @@
 
 from setuptools import find_packages
 from setuptools import setup
+import io
 
+def read(filename):
+    with io.open(filename, 'r', encoding='utf-8') as fp:
+        return fp.read()
 
 long_description = (
-    open('README.rst').read() +
+    read('README.rst') +
     '\n' +
     'Contributors\n' +
     '============\n' +
     '\n' +
-    open('CONTRIBUTORS.rst').read() +
+    read('CONTRIBUTORS.rst') +
     '\n' +
-    open('CHANGES.rst').read() +
+    read('CHANGES.rst') +
     '\n')
 
 
