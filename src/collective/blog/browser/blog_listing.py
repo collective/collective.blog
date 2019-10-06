@@ -1,5 +1,6 @@
+from __future__ import absolute_import
 import calendar
-from urllib import quote_plus
+from six.moves.urllib.parse import quote_plus
 
 from DateTime import DateTime
 from Products.CMFPlone.PloneBatch import Batch

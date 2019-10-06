@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 from plone import api
 from plone.app.layout.viewlets import ViewletBase
 from plone.memoize.instance import memoizedproperty

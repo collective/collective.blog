@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 from decimal import Decimal
 import re
 from zope import schema
@@ -17,6 +18,7 @@ from plone.memoize.instance import memoizedproperty
 from plone.portlets.interfaces import IPortletDataProvider
 
 from .. import _
+import six
 
 
 search_base_uid_source = CatalogSource(object_provides={
@@ -141,8 +143,7 @@ class Renderer(base.Renderer):
                     subjects[subject] = 1
 
         result = []
-        weight_list = subjects.values()
-        weight_list.sort()
+        weight_list = sorted(subjects.values())
         if weight_list:
             minimal = weight_list[:1][0]
             maximal = weight_list[-1:][0]
@@ -150,7 +151,7 @@ class Renderer(base.Renderer):
             maxsize = float(self.data.maxsize)
             minsize = float(self.data.minsize)
 
-            for subject, occurences in subjects.iteritems():
+            for subject, occurences in six.iteritems(subjects):
                 try:
                     size = float((maxsize *
                                  (occurences - minimal))) / \

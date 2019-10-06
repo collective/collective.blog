@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer

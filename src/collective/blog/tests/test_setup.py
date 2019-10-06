@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+from __future__ import absolute_import
 from collective.blog.testing import COLLECTIVE_BLOG_INTEGRATION_TESTING  # noqa
 from plone import api
 
