@@ -10,7 +10,7 @@ from plone import api
 from collective.blog.testing import COLLECTIVE_BLOG_INTEGRATION_TESTING  # noqa
 from collective.blog.interfaces import IBlogEntry
 
-import unittest2 as unittest
+import unittest
 
 
 class BlogEntryIntegrationTest(unittest.TestCase):
