@@ -1,0 +1,6 @@
+graft src/collective_blog
+graft docs
+include *.rst
+include *.md
+include *.cfg
+global-exclude *.pyc

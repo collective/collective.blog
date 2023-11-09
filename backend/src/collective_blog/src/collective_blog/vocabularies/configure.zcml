@@ -1,0 +1,10 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Example vocabulary
+  <utility
+      name="collective_blog.vocabulary.vocabulary"
+      component=".industries_vocabulary"
+      />
+   -->
+
+</configure>
