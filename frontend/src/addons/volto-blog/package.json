@@ -22,8 +22,8 @@
     "release-rc": "release-it --preRelease=rc"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.0.0",
     "@babel/eslint-parser": "7.22.15",
+    "@plone/scripts": "^3.0.0",
     "eslint": "8.49.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-config-react-app": "7.0.1",
@@ -51,7 +51,7 @@
   ],
   "dependencies": {
     "@eeacms/volto-accordion-block": "*",
-    "@kitconcept/volto-slider-block": "*",
-    "@eeacms/volto-matomo": "*"
+    "@eeacms/volto-matomo": "*",
+    "@kitconcept/volto-slider-block": "*"
   }
 }

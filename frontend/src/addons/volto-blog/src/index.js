@@ -1,4 +1,3 @@
-
 const applyConfig = (config) => {
   config.settings = {
     ...config.settings,

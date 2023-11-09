@@ -25,7 +25,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "private": false,
   "workspaces": [
     "src/addons/volto-blog"
   ],
