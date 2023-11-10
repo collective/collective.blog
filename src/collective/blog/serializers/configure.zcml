@@ -1,0 +1,16 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Serializers -->
+
+  <utility
+      factory=".summary.JSONSummarySerializerMetadata"
+      name="collective.blog.summary_serializer_metadata"
+      />
+
+
+  <!-- Content Type Serializers -->
+  <adapter factory=".author.AuthorJSONSerializer" />
+  <adapter factory=".blog.BlogJSONSerializer" />
+  <adapter factory=".post.PostJSONSerializer" />
+
+</configure>

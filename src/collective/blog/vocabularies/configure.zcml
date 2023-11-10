@@ -1,0 +1,9 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Authors Vocabularies -->
+  <utility
+      name="collective.blog.authors"
+      component=".authors.authors_vocabulary"
+      />
+
+</configure>

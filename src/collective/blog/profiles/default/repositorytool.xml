@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repositorytool>
+  <policymap>
+    <type name="Author">
+      <policy name="at_edit_autoversion" />
+      <policy name="version_on_revert" />
+    </type>
+    <type name="Blog">
+      <policy name="at_edit_autoversion" />
+      <policy name="version_on_revert" />
+    </type>
+    <type name="Post">
+      <policy name="at_edit_autoversion" />
+      <policy name="version_on_revert" />
+    </type>
+  </policymap>
+</repositorytool>

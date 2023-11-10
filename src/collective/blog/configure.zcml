@@ -1,52 +1,23 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="collective.blog">
+    i18n_domain="collective.blog"
+    >
 
   <i18n:registerTranslations directory="locales" />
 
-  <includeDependencies package="." />
-
-  <include package=".browser" />
-  <include package=".content" />
-  <include package=".portlets" />
-  <include package=".viewlets" />
-
-
-  <genericsetup:registerProfile
-      name="default"
-      title="collective.blog"
-      directory="profiles/default"
-      description="Installs the collective.blog add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
+  <include
+      package="Products.CMFCore"
+      file="permissions.zcml"
       />
 
-  <genericsetup:importStep
-      name="collective.blog-postInstall"
-      title="collective.blog post_install import step"
-      description="Post install import step from collective.blog"
-      handler=".setuphandlers.post_install">
-  </genericsetup:importStep>
+  <include file="dependencies.zcml" />
+  <include file="profiles.zcml" />
 
-  <genericsetup:registerProfile
-      name="uninstall"
-      title="collective.blog"
-      directory="profiles/uninstall"
-      description="Uninstalls the collective.blog add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-  <genericsetup:importStep
-      name="collective.blog-uninstall"
-      title="collective.blog uninstall import step"
-      description="Import step run during ininstalling collective.blog"
-      handler=".setuphandlers.uninstall">
-  </genericsetup:importStep>
-
-  <utility
-      factory=".setuphandlers.HiddenProfiles"
-      name="collective.blog-hiddenprofiles" />
+  <include package=".controlpanel" />
+  <include package=".indexers" />
+  <include package=".serializers" />
+  <include package=".services" />
+  <include package=".vocabularies" />
 
 </configure>

@@ -1,0 +1,10 @@
+default_context:
+    initial_user_name: 'admin'
+    initial_user_password: 'admin'
+
+    dos_protection_form_disk_limit: "10Mb"
+
+    load_zcml:
+        package_includes: ['collective.blog']
+
+    db_storage: direct

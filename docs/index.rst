@@ -1,5 +1,0 @@
-====================
-collective.blog
-====================
-
-User documentation

@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<portlets>
-    <portlet
-        addview="collective.blog.portlet.tagcloud"
-        remove="True" />
-</portlets>
