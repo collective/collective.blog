@@ -69,6 +69,6 @@ setup(
     [z3c.autoinclude.plugin]
     target = plone
     [console_scripts]
-    update_dist_locale = collective.blog.locales.update:update_locale
+    update_locale = collective.blog.locales.update:update_locale
     """,
 )

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2023-11-10 16:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,3 +16,90 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.blog\n"
+
+#: collective/blog/profiles/default/types/Post.xml
+msgid "A Blog Post"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Blog.xml
+msgid "A folderish content item representing a Blog"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Author.xml
+msgid "An Author"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Author.xml
+msgid "Author"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Blog.xml
+msgid "Blog"
+msgstr ""
+
+#: collective/blog/profiles.zcml:13
+msgid "Blog: Install"
+msgstr ""
+
+#: collective/blog/profiles.zcml:21
+msgid "Blog: Uninstall"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Author.xml
+#: collective/blog/profiles/default/types/Blog.xml
+#: collective/blog/profiles/default/types/Post.xml
+msgid "Edit"
+msgstr ""
+
+#: collective/blog/profiles.zcml:13
+msgid "Package to configure Blog content types"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Post.xml
+msgid "Post"
+msgstr ""
+
+#: collective/blog/profiles.zcml:21
+msgid "Uninstall Blog setup."
+msgstr ""
+
+#: collective/blog/profiles/default/types/Author.xml
+#: collective/blog/profiles/default/types/Blog.xml
+#: collective/blog/profiles/default/types/Post.xml
+msgid "View"
+msgstr ""
+
+#. Default: "Contributors"
+#: collective/blog/content/post.py:41
+msgid "contributors"
+msgstr ""
+
+#. Default: "Persons responsible for creating the content of this post. Please enter a list of user names, one per line. The principal creator should come first."
+#: collective/blog/content/post.py:25
+msgid "help_authors"
+msgstr ""
+
+#. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
+#: collective/blog/content/post.py:42
+msgid "help_contributors"
+msgstr ""
+
+#. Default: "Copyright statement or other rights information on this item."
+#: collective/blog/content/post.py:58
+msgid "help_copyrights"
+msgstr ""
+
+#. Default: "Authors"
+#: collective/blog/content/post.py:24
+msgid "label_authors"
+msgstr ""
+
+#. Default: "Rights"
+#: collective/blog/content/post.py:57
+msgid "label_copyrights"
+msgstr ""
+
+#. Default: "Metadata"
+#: collective/blog/content/post.py:19
+msgid "label_schema_metadata"
+msgstr ""
