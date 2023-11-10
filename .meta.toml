@@ -10,10 +10,20 @@ codespell_skip = "*.min.js"
 codespell_ignores = "vew"
 dependencies_ignores = "['plone.volto', 'zestreleaser.towncrier', 'zest.releaser', 'pytest', 'pytest-cov', 'pytest-plone']"
 dependencies_mappings = [
-    "Plone = ['Products.CMFPlone', 'Products.CMFCore', 'Products.GenericSetup']",
+    "Plone = ['Products.CMFPlone', 'Products.CMFCore', 'Products.GenericSetup', 'Products.ZCatalog', 'z3c.form']",
     ]
 
 [tox]
 use_mxdev = true
 test_runner = "pytest"
 test_path = "/tests"
+
+[github]
+ref = "1.0.0"
+jobs = [
+    "qa",
+    "test",
+    "coverage",
+    "dependencies",
+    "release_ready",
+    ]
