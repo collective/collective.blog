@@ -104,7 +104,7 @@ bin/i18ndude: bin/pip
 .PHONY: i18n
 i18n: bin/i18ndude ## Update locales
 	@echo "$(GREEN)==> Updating locales$(RESET)"
-	bin/update_dist_locale
+	bin/update_locale
 
 # Tests
 .PHONY: test

@@ -12,49 +12,49 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.blog\n"
+"Domain: DOMAIN\n"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "A Blog Post"
-msgstr ""
+msgstr "Uma postagem no blog"
 
 #: collective/blog/profiles/default/types/Blog.xml
 msgid "A folderish content item representing a Blog"
-msgstr ""
+msgstr "Um tipo de conteúdo que representa um Blog"
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "An Author"
-msgstr ""
+msgstr "Um autor"
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: collective/blog/profiles/default/types/Blog.xml
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: collective/blog/profiles.zcml:13
 msgid "Blog: Install"
-msgstr ""
+msgstr "Blog: Instalação"
 
 #: collective/blog/profiles.zcml:21
 msgid "Blog: Uninstall"
-msgstr ""
+msgstr "Blog: Remover"
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/Blog.xml
 #: collective/blog/profiles/default/types/Post.xml
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
-msgstr ""
+msgstr "Pacote que configura tipos de conteúdo para blogs"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "Post"
-msgstr ""
+msgstr "Postagem"
 
 #: collective/blog/profiles.zcml:21
 msgid "Uninstall Blog setup."
@@ -64,39 +64,39 @@ msgstr ""
 #: collective/blog/profiles/default/types/Blog.xml
 #: collective/blog/profiles/default/types/Post.xml
 msgid "View"
-msgstr ""
+msgstr "Visão"
 
 #. Default: "Contributors"
 #: collective/blog/content/post.py:41
 msgid "contributors"
-msgstr ""
+msgstr "Contribuidores"
 
 #. Default: "Persons responsible for creating the content of this post. Please enter a list of user names, one per line. The principal creator should come first."
 #: collective/blog/content/post.py:25
 msgid "help_authors"
-msgstr ""
+msgstr "Pessoas responsáveis por esta postagem."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
 #: collective/blog/content/post.py:42
 msgid "help_contributors"
-msgstr ""
+msgstr "Pessoas que contribuiram para esta postagem."
 
 #. Default: "Copyright statement or other rights information on this item."
 #: collective/blog/content/post.py:58
 msgid "help_copyrights"
-msgstr ""
+msgstr "Informações sobre direitos autorais desta postagem."
 
 #. Default: "Authors"
 #: collective/blog/content/post.py:24
 msgid "label_authors"
-msgstr ""
+msgstr "Autores"
 
 #. Default: "Rights"
 #: collective/blog/content/post.py:57
 msgid "label_copyrights"
-msgstr ""
+msgstr "Direitos Autorais"
 
 #. Default: "Metadata"
 #: collective/blog/content/post.py:19
 msgid "label_schema_metadata"
-msgstr ""
+msgstr "Metadados"

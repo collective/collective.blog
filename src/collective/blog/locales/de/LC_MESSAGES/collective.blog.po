@@ -12,7 +12,7 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.blog\n"
+"Domain: DOMAIN\n"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "A Blog Post"
