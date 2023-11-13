@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.blog"
+    >
+
+  <!-- Blog Behavior -->
+  <plone:behavior
+      name="collective.blog.blog_info"
+      title="Blog Behavior"
+      description="Implements a blog behavior on a content type"
+      provides=".blog.IBlogInfo"
+      />
+
+</configure>
