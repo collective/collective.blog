@@ -9,16 +9,11 @@
   <record field="displayed_types"
           interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
           name="plone.displayed_types"
+          purge="false"
   >
     <value>
       <element>Author</element>
       <element>Blog</element>
-      <element>Collection</element>
-      <element>Document</element>
-      <element>Event</element>
-      <element>Folder</element>
-      <element>Link</element>
-      <element>News Item</element>
     </value>
   </record>
 
