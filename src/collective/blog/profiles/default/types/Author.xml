@@ -8,7 +8,7 @@
   <!-- Basic properties -->
   <property name="title"
             i18n:translate=""
-  >Author</property>
+  >Blog Author</property>
   <property name="description"
             i18n:translate=""
   >A Blog Author</property>
