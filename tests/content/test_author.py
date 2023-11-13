@@ -11,8 +11,10 @@ CONTENT_TYPE = "Author"
 
 class TestAuthor:
     @pytest.fixture(autouse=True)
-    def _fti(self, get_fti, integration):
+    def _fti(self, get_fti, portal, blogs_payload):
         self.fti = get_fti(CONTENT_TYPE)
+        with api.env.adopt_roles(["Manager"]):
+            self.blog = api.content.create(container=portal, **blogs_payload[0])
 
     def test_fti(self):
         assert isinstance(self.fti, DexterityFTI)
@@ -42,8 +44,10 @@ class TestAuthor:
         assert behavior in get_behaviors(CONTENT_TYPE)
 
     def test_create(self, portal, authors_payload):
+        """A Blog Author need to be created inside a Blog."""
+        blog = self.blog
         payload = authors_payload[0]
         with api.env.adopt_roles(["Manager"]):
-            content = api.content.create(container=portal, **payload)
+            content = api.content.create(container=blog, **payload)
         assert content.portal_type == CONTENT_TYPE
         assert isinstance(content, Author)
