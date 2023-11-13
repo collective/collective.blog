@@ -17,6 +17,10 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.blog\n"
 
+#: collective/blog/profiles/default/types/Author.xml
+msgid "A Blog Author"
+msgstr ""
+
 #: collective/blog/profiles/default/types/Post.xml
 msgid "A Blog Post"
 msgstr ""
@@ -25,16 +29,16 @@ msgstr ""
 msgid "A folderish content item representing a Blog"
 msgstr ""
 
-#: collective/blog/profiles/default/types/Author.xml
-msgid "An Author"
-msgstr ""
-
-#: collective/blog/profiles/default/types/Author.xml
-msgid "Author"
-msgstr ""
-
 #: collective/blog/profiles/default/types/Blog.xml
 msgid "Blog"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Author.xml
+msgid "Blog Author"
+msgstr ""
+
+#: collective/blog/profiles/default/types/Post.xml
+msgid "Blog Post"
 msgstr ""
 
 #: collective/blog/behaviors/configure.zcml:13
@@ -61,10 +65,6 @@ msgstr ""
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
-msgstr ""
-
-#: collective/blog/profiles/default/types/Post.xml
-msgid "Post"
 msgstr ""
 
 #: collective/blog/profiles.zcml:21
