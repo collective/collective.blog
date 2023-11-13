@@ -22,25 +22,6 @@ globals().update(
 
 
 @pytest.fixture
-def authors_payload() -> list:
-    """Payload to create two author items."""
-    return [
-        {
-            "type": "Author",
-            "id": "douglas-adams",
-            "title": "Douglas Adams",
-            "description": "A very good writer",
-        },
-        {
-            "type": "Author",
-            "id": "marvin",
-            "title": "Marvin",
-            "description": "A very good nice robot",
-        },
-    ]
-
-
-@pytest.fixture
 def blogs_payload() -> list:
     """Payload to create two blogs items."""
     return [
@@ -55,6 +36,25 @@ def blogs_payload() -> list:
             "id": "dumpster",
             "title": "General",
             "description": "Posts about life, universe and everything",
+        },
+    ]
+
+
+@pytest.fixture
+def authors_payload() -> list:
+    """Payload to create two author items."""
+    return [
+        {
+            "type": "Author",
+            "id": "douglas-adams",
+            "title": "Douglas Adams",
+            "description": "A very good writer",
+        },
+        {
+            "type": "Author",
+            "id": "marvin",
+            "title": "Marvin",
+            "description": "A very good nice robot",
         },
     ]
 
@@ -79,17 +79,6 @@ def posts_payload() -> list:
 
 
 @pytest.fixture
-def authors(portal, authors_payload) -> dict:
-    """Create Authors content items."""
-    response = {}
-    with api.env.adopt_roles(["Manager"]):
-        for data in authors_payload:
-            content = api.content.create(container=portal, **data)
-            response[content.UID()] = content.title
-    return response
-
-
-@pytest.fixture
 def blogs(portal, blogs_payload) -> dict:
     """Create Blogs content items."""
     response = {}
@@ -101,13 +90,26 @@ def blogs(portal, blogs_payload) -> dict:
 
 
 @pytest.fixture
+def authors(blogs, authors_payload) -> dict:
+    """Create Authors content items."""
+    response = {}
+    blog_uuid = list(blogs.keys())
+    with api.env.adopt_roles(["Manager"]):
+        blog = api.content.get(UID=blog_uuid[0])
+        for data in authors_payload:
+            content = api.content.create(container=blog, **data)
+            response[content.UID()] = content.title
+    return response
+
+
+@pytest.fixture
 def posts(portal, authors, blogs, posts_payload) -> dict:
     """Create Blogs, Authors and Posts."""
     response = {}
     authors_uuid = list(authors.keys())
     blog_uuid = list(blogs.keys())
     with api.env.adopt_roles(["Manager"]):
-        blog = api.content.get(uuid=blog_uuid[0])
+        blog = api.content.get(UID=blog_uuid[0])
         for data in posts_payload:
             # Add one author
             data["creators"] = [authors_uuid[0]]
