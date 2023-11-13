@@ -50,6 +50,7 @@
     <element value="volto.navtitle" />
     <element value="volto.preview_image_link" />
     <element value="volto.head_title" />
+    <element value="collective.blog.blog_info" />
   </property>
 
   <!-- View information -->
