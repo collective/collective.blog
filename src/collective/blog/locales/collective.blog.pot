@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-11-10 16:17+0000\n"
+"POT-Creation-Date: 2023-11-13 14:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,10 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
+#: collective/blog/behaviors/configure.zcml:13
+msgid "Blog Behavior"
+msgstr ""
+
 #: collective/blog/profiles.zcml:13
 msgid "Blog: Install"
 msgstr ""
@@ -49,6 +53,10 @@ msgstr ""
 #: collective/blog/profiles/default/types/Blog.xml
 #: collective/blog/profiles/default/types/Post.xml
 msgid "Edit"
+msgstr ""
+
+#: collective/blog/behaviors/configure.zcml:13
+msgid "Implements a blog behavior on a content type"
 msgstr ""
 
 #: collective/blog/profiles.zcml:13
