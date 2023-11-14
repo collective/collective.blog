@@ -9,9 +9,8 @@
   <record field="displayed_types"
           interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
           name="plone.displayed_types"
-          purge="false"
   >
-    <value>
+    <value purge="false">
       <element>Author</element>
       <element>Blog</element>
     </value>
