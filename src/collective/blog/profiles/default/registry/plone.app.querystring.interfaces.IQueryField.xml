@@ -3,25 +3,6 @@
           i18n:domain="plone"
 >
 
-  <!-- Restrict types to display in navigation 
-    Default: Collection, Document, Event, Folder, Link, News Item
-    -->
-  <record field="displayed_types"
-          interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
-          name="plone.displayed_types"
-  >
-    <value purge="false">
-      <element>Author</element>
-      <element>Blog</element>
-    </value>
-  </record>
-
-  <records interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema"
-           prefix="plone"
-  >
-    <value key="nonfolderish_tabs">True</value>
-  </records>
-
   <!-- Add options to search by authors -->
   <records interface="plone.app.querystring.interfaces.IQueryField"
            prefix="plone.app.querystring.field.Creator"
@@ -40,7 +21,7 @@
     <value key="operations">
       <element>plone.app.querystring.operation.selection.any</element>
     </value>
-    <value key="vocabulary">collective.blog.creators</value>
+    <value key="vocabulary">collective.blog.authors</value>
   </records>
 
 </registry>
