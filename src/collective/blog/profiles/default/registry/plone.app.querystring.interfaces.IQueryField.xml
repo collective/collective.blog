@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="plone"
+>
+
+  <!-- Add options to search by authors -->
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.Creator"
+  >
+    <value key="title"
+           i18n:translate=""
+    >Author</value>
+    <value key="description"
+           i18n:translate=""
+    >Categorization by Authors.</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="group"
+           i18n:translate=""
+    >Blog</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.selection.any</element>
+    </value>
+    <value key="vocabulary">collective.blog.authors</value>
+  </records>
+
+</registry>
