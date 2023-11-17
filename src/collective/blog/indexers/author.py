@@ -1,7 +1,7 @@
-from .author import _find_blog_uid
 from Acquisition import aq_parent
 from collective.blog.content.author import Author
 from collective.blog.content.author import IAuthor
+from collective.blog.indexers import _find_blog_uid
 from plone.indexer import indexer
 
 
