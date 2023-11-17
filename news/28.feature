@@ -1,0 +1,1 @@
+Add index and metadata for blog post and blog author, Add test for blog author [@jonaspiterek]

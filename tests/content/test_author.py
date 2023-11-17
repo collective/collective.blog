@@ -51,3 +51,18 @@ class TestAuthor:
             content = api.content.create(container=blog, **payload)
         assert content.portal_type == CONTENT_TYPE
         assert isinstance(content, Author)
+
+    def test_indexer_blog(self, portal, authors_payload):
+        blog = self.blog
+        blog_uid = api.content.get_uuid(blog)
+        payload = authors_payload[0]
+        # Check there is no Author connected to this blog
+        brains = api.content.find(portal_type=CONTENT_TYPE, blog=blog_uid)
+        assert len(brains) == 0
+        # Create an Author inside the blog
+        with api.env.adopt_roles(["Manager"]):
+            content = api.content.create(container=blog, **payload)
+
+        brains = api.content.find(portal_type=CONTENT_TYPE, blog=blog_uid)
+        assert len(brains) == 1
+        assert brains[0].Title == content.title
