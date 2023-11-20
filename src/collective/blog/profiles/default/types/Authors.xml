@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
         meta_type="Dexterity FTI"
-        name="Blog"
+        name="Authors"
         i18n:domain="collective.blog"
 >
 
   <!-- Basic properties -->
   <property name="title"
             i18n:translate=""
-  >Blog</property>
+  >Authors</property>
   <property name="description"
             i18n:translate=""
-  >A folderish content item representing a Blog</property>
+  >An Authors folder</property>
 
   <property name="allow_discussion">False</property>
-  <property name="factory">Blog</property>
+  <property name="factory">Authors</property>
   <property name="icon_expr" />
   <property name="link_target" />
 
   <!-- Hierarchy control -->
   <property name="allowed_content_types">
-    <element value="Authors" />
-    <element value="Document" />
-    <element value="File" />
-    <element value="Image" />
-    <element value="Post" />
+    <element value="Author" />
   </property>
   <property name="filter_content_types">True</property>
-  <property name="global_allow">True</property>
+  <property name="global_allow">False</property>
 
   <!-- Schema, class and security -->
   <property name="add_permission">cmf.AddPortalContent</property>
-  <property name="klass">collective.blog.content.blog.Blog</property>
+  <property name="klass">collective.blog.content.authors.Authors</property>
   <property name="model_file" />
   <property name="model_source" />
-  <property name="schema">collective.blog.content.blog.IBlog</property>
+  <property name="schema">collective.blog.content.authors.IAuthors</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors"
@@ -50,11 +46,10 @@
     <element value="volto.navtitle" />
     <element value="volto.preview_image_link" />
     <element value="volto.head_title" />
-    <element value="collective.blog.blog_info" />
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++Blog</property>
+  <property name="add_view_expr">string:${folder_url}/++add++Authors</property>
   <property name="immediate_view">view</property>
   <property name="default_view">view</property>
   <property name="default_view_fallback">False</property>

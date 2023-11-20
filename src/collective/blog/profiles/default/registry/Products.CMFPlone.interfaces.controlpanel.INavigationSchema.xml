@@ -11,7 +11,7 @@
           name="plone.displayed_types"
   >
     <value purge="false">
-      <element>Author</element>
+      <element>Authors</element>
       <element>Blog</element>
     </value>
   </record>

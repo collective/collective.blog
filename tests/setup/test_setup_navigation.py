@@ -11,7 +11,7 @@ class TestSetupNavigation:
     @pytest.mark.parametrize(
         "portal_type",
         [
-            "Author",
+            "Authors",
             "Blog",
             "Collection",
             "Document",

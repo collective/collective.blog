@@ -6,6 +6,9 @@
           name="Author"
   />
   <object meta_type="Dexterity FTI"
+          name="Authors"
+  />
+  <object meta_type="Dexterity FTI"
           name="Blog"
   />
   <object meta_type="Dexterity FTI"
