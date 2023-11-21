@@ -1,8 +1,9 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
-  <!-- <subscriber
-      for=""
-      handler=""
-      /> -->
+  <subscriber
+      for="collective.blog.content.blog.IBlog
+           zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".auto_add_authors.auto_add_authors_container"
+      />
 
 </configure>
