@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rolemap>
   <permissions>
-
+    <permission acquire="False"
+                name="collective.blog: Add Author"
+    >
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Owner" />
+      <role name="Editor" />
+      <role name="Contributor" />
+    </permission>
+    <permission acquire="False"
+                name="collective.blog: Add Blog"
+    >
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Owner" />
+      <role name="Editor" />
+      <role name="Contributor" />
+    </permission>
+    <permission acquire="False"
+                name="collective.blog: Add Post"
+    >
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Owner" />
+      <role name="Editor" />
+      <role name="Contributor" />
+    </permission>
   </permissions>
 </rolemap>

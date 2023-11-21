@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.blog"
+    >
+
+  <configure zcml:condition="installed AccessControl.security">
+
+    <permission
+        id="collective.blog.author.add"
+        title="collective.blog: Add Author"
+        />
+    <permission
+        id="collective.blog.blog.add"
+        title="collective.blog: Add Blog"
+        />
+    <permission
+        id="collective.blog.post.add"
+        title="collective.blog: Add Post"
+        />
+
+  </configure>
+
+</configure>
