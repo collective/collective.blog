@@ -27,7 +27,7 @@
   <property name="global_allow">False</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">cmf.AddPortalContent</property>
+  <property name="add_permission">collective.blog.post.add</property>
   <property name="klass">collective.blog.content.post.Post</property>
   <property name="model_file" />
   <property name="model_source" />
