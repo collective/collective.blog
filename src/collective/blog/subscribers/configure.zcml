@@ -3,7 +3,7 @@
   <subscriber
       for="collective.blog.content.blog.IBlog
            zope.lifecycleevent.interfaces.IObjectAddedEvent"
-      handler=".auto_add_authors.auto_add_authors_container"
+      handler=".blog.auto_add_authors_container"
       />
 
 </configure>
