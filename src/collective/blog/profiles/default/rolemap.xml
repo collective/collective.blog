@@ -3,13 +3,7 @@
   <permissions>
     <permission acquire="False"
                 name="collective.blog: Add Author"
-    >
-      <role name="Manager" />
-      <role name="Site Administrator" />
-      <role name="Owner" />
-      <role name="Editor" />
-      <role name="Contributor" />
-    </permission>
+    />
     <permission acquire="False"
                 name="collective.blog: Add Blog"
     >
