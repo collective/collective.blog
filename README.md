@@ -32,8 +32,8 @@
 | name    | context                         |
 | ------- | ------------------------------- |
 | `Blog` | A folderish content type that supports adding Posts and Authors |
-| `Author` | An Author in a blog |
-| `Post` | A Post in a blog |
+| `Blog Author` | An Author in a blog |
+| `Blog Post` | A Post in a blog |
 
 
 Installation
