@@ -20,7 +20,6 @@
 
   <!-- Hierarchy control -->
   <property name="allowed_content_types">
-    <element value="Author" />
     <element value="Document" />
     <element value="File" />
     <element value="Image" />

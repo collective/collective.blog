@@ -1,0 +1,1 @@
+Create folder authors inside a blog [@jonaspiterek]

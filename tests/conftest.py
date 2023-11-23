@@ -96,8 +96,9 @@ def authors(blogs, authors_payload) -> dict:
     blog_uuid = list(blogs.keys())
     with api.env.adopt_roles(["Manager"]):
         blog = api.content.get(UID=blog_uuid[0])
+        authors = blog.authors
         for data in authors_payload:
-            content = api.content.create(container=blog, **data)
+            content = api.content.create(container=authors, **data)
             response[content.UID()] = content.title
     return response
 
