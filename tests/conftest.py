@@ -70,6 +70,7 @@ def all_content() -> list:
         },
         {
             "_container": "/tech-blog/authors",
+            "_preview_image_link": "/an-image",
             "type": "Author",
             "id": "douglas-adams",
             "title": "Douglas Adams",

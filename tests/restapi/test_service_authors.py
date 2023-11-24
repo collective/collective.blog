@@ -40,6 +40,9 @@ class TestServiceAuthors:
         assert len(data["items"]) == 1
         author_info = data["items"][0]
         assert author_info["fullname"] == "Douglas Adams"
+        scales = author_info["image_scales"]
+        assert isinstance(scales, dict)
+        assert "preview_image_link" in scales
 
     def test_author_expander(self, manager_request):
         url = f"{self.posts[0]}?expand={self.expander}"
