@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<object name="portal_controlpanel">
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        name="portal_controlpanel"
+        i18n:domain="collective.blog"
+>
+  <configlet action_id="blog-controlpanel"
+             appId="blog-controlpanel"
+             category="Products"
+             title="Blog Settings"
+             visible="True"
+  >
+    <permission>Manage portal</permission>
+  </configlet>
 
 </object>

@@ -4,5 +4,10 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.blog"
     >
+  <!-- Control Panel adapter-->
+  <adapter
+      factory=".controlpanel.BlogConfigletPanel"
+      name="blog-controlpanel"
+      />
 
 </configure>

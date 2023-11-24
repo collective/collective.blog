@@ -15,6 +15,7 @@
   <include file="permissions.zcml" />
   <include file="profiles.zcml" />
 
+  <!-- Internal packages -->
   <include package=".behaviors" />
   <include package=".controlpanel" />
   <include package=".indexers" />
