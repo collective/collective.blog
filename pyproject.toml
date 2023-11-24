@@ -153,6 +153,10 @@ ignore = [
 #  """
 ##
 
+[tool.coverage.run]
+omit = [
+  "src/collective/blog/locales/*",
+]
 
 ##
 # Add extra configuration options in .meta.toml:
