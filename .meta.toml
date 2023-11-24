@@ -12,6 +12,12 @@ dependencies_ignores = "['plone.volto', 'zestreleaser.towncrier', 'zest.releaser
 dependencies_mappings = [
     "Plone = ['Products.CMFPlone', 'Products.CMFCore', 'Products.GenericSetup', 'Products.ZCatalog', 'z3c.form']",
     ]
+extra_lines = """
+[tool.coverage.run]
+omit = [
+  "src/collective/blog/locales/*",
+]
+"""
 
 [tox]
 use_mxdev = true
