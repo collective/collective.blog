@@ -40,14 +40,18 @@ class Authors:
                     "fullname": brain.Title,
                 }
             )
-        if not data:
-            data = [
+        data = (
+            data
+            if data
+            else [
                 {
                     "@id": portal_url,
                     "fullname": DEFAULT_USER,
                 }
             ]
-        return {"authors": data}
+        )
+        result["authors"]["items"] = data
+        return result
 
 
 class AuthorsGet(Service):

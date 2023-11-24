@@ -6,7 +6,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="Blog: Install"
+      title="Blog Support for Plone"
       description="Package to configure Blog content types"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/default"
@@ -14,12 +14,18 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Blog: Uninstall"
+      title="Blog Support for Plone: Uninstall"
       description="Uninstall Blog setup."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/uninstall"
       />
 
   <include package=".upgrades" />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.blog"
+      />
 
 </configure>
