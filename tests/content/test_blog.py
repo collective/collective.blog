@@ -1,5 +1,7 @@
+from AccessControl.PermissionRole import rolesForPermissionOn
 from collective.blog.content.blog import Blog
 from plone import api
+from plone.dexterity.content import DexterityContent
 from plone.dexterity.fti import DexterityFTI
 from zope.component import createObject
 
@@ -15,6 +17,21 @@ def blog(blogs: dict) -> Blog:
     blog_uuid = list(blogs.keys())[0]
     blog = api.content.get(UID=blog_uuid)
     return blog
+
+
+@pytest.fixture
+def authors_folder(blog: Blog) -> DexterityContent:
+    """Return the authors folder created in a blog."""
+    return blog["authors"]
+
+
+@pytest.fixture
+def disable_authors(portal):
+    """Disable Authors folderish creation"""
+    key = "collective.blog.settings.enable_authors_folder"
+    api.portal.set_registry_record(key, False)
+    yield portal
+    api.portal.set_registry_record(key, True)
 
 
 class TestBlog:
@@ -69,3 +86,40 @@ class TestBlog:
         brains = api.content.find(object_provides=IBlogInfo)
 
         assert len(brains) == 2
+
+    def test_authors_folder_creation(self, blogs_payload):
+        payload = blogs_payload[0]
+        with api.env.adopt_roles(["Manager"]):
+            content = api.content.create(container=self.portal, **payload)
+        assert "authors" in content.objectIds()
+
+    @pytest.mark.parametrize(
+        "attr,expected",
+        [
+            ["portal_type", "Document"],
+            ["title", "Authors"],
+        ],
+    )
+    def test_authors_folder(self, authors_folder, attr, expected):
+        assert getattr(authors_folder, attr) == expected
+
+    @pytest.mark.parametrize(
+        "role",
+        [
+            "Manager",
+            "Site Administrator",
+            "Editor",
+            "Contributor",
+            "Owner",
+        ],
+    )
+    def test_authors_folder_permission(self, authors_folder, role):
+        permission = "collective.blog: Add Author"
+        roles = rolesForPermissionOn(permission, authors_folder)
+        assert role in roles
+
+    def test_authors_folder_not_created(self, blogs_payload, disable_authors):
+        payload = blogs_payload[0]
+        with api.env.adopt_roles(["Manager"]):
+            content = api.content.create(container=self.portal, **payload)
+        assert "authors" not in content.objectIds()
