@@ -9,6 +9,21 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a3 (2023-11-24)
+
+
+### New features:
+
+- Control creation of "Authors" folder via registry configuration [@ericof] #34
+- Add control panel to configure Blog Settings [@ericof] #36
+- Additional information returned on /@authors endpoint [@ericof] #40
+
+
+### Internal:
+
+- Increase test coverage of the package [@ericof] #38
+
+
 ## 1.0.0a2 (2023-11-23)
 
 
