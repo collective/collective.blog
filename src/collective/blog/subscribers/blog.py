@@ -2,6 +2,8 @@ from collective.blog import logger
 from collective.blog.content.blog import Blog
 from plone import api
 
+import uuid
+
 
 PERMISSIONS_BLOG = (
     ("collective.blog: Add Blog", []),
@@ -30,12 +32,18 @@ def auto_add_authors_container(blog: Blog, event):
     for permission_id, roles in PERMISSIONS_BLOG:
         blog.manage_permission(permission_id, roles=roles, acquire=False)
         _log_permission_change(blog_path, permission_id, roles)
+    # Create Authors container
     authors = api.content.create(
         type="Document",
         id="authors",
         title="Authors",
         container=blog,
     )
+    # Add Blocks
+    uuids = [str(uuid.uuid4()), str(uuid.uuid4())]
+    authors.blocks = {uuids[0]: {"@type": "title"}, uuids[1]: {"@type": "slate"}}
+    authors.blocks_layout = {"items": [uuids[0], uuids[1]]}
+
     authors_path = "/".join(authors.getPhysicalPath())
     logger.info(f"Created authors folder inside {blog_path}")
     for permission_id, roles in PERMISSIONS_AUTHORS:
