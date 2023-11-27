@@ -1,1 +1,0 @@
-Blog and Author should be listed on Plone Navigation [@jonaspiterek]

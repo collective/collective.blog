@@ -13,8 +13,8 @@ long_description = f"""
 
 setup(
     name="collective.blog",
-    version="1.0.0a2",
-    description="Blog content types for Plone.",
+    version="1.0.0a4.dev0",
+    description="A Blog-Addon for Plone.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -33,7 +33,7 @@ setup(
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
     keywords="Python Plone CMS",
-    author="Jonas Piterek",
+    author="Jonas Piterek (kitconcept GmbH)",
     author_email="info@kitconcept.com",
     url="https://github.com/collective/collective.blog",
     project_urls={

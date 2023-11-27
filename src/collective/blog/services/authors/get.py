@@ -1,9 +1,11 @@
 from plone import api
 from plone.restapi.interfaces import IExpandableElement
+from plone.restapi.interfaces import ISerializeToJsonSummary
 from plone.restapi.services import Service
 from Products.ZCatalog.CatalogBrains import AbstractCatalogBrain
 from typing import List
 from zope.component import adapter
+from zope.component import getMultiAdapter
 from zope.interface import implementer
 from zope.interface import Interface
 
@@ -21,9 +23,18 @@ class Authors:
         self.request = request
 
     def _get_authors_info(self, authors: List[str]) -> List[AbstractCatalogBrain]:
-        """Given a list of authors,"""
+        """Given a list of uids, return a list of brains."""
         brains = api.content.find(portal_type="Author", UID=authors)
         return brains
+
+    def _serialize_brains(self, brains: List[AbstractCatalogBrain]) -> List[dict]:
+        """Serialize Authors information."""
+        data = []
+        for brain in brains:
+            result = getMultiAdapter((brain, self.request), ISerializeToJsonSummary)()
+            result["fullname"] = result["title"]
+            data.append(result)
+        return data
 
     def __call__(self, expand=True):
         result = {"authors": {"@id": f"{self.context.absolute_url()}/@authors"}}
@@ -31,23 +42,17 @@ class Authors:
             return result
 
         portal_url = api.portal.get().absolute_url()
-        data = []
+        default_authors = [
+            {
+                "@id": portal_url,
+                "fullname": DEFAULT_USER,
+                "description": "",
+                "image_scales": None,
+            }
+        ]
         brains = self._get_authors_info(self.context.creators)
-        for brain in brains:
-            data.append(
-                {
-                    "@id": brain.getURL(),
-                    "fullname": brain.Title,
-                }
-            )
-        if not data:
-            data = [
-                {
-                    "@id": portal_url,
-                    "fullname": DEFAULT_USER,
-                }
-            ]
-        return {"authors": data}
+        result["authors"]["items"] = self._serialize_brains(brains) or default_authors
+        return result
 
 
 class AuthorsGet(Service):
