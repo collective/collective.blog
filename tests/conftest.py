@@ -56,14 +56,14 @@ def all_content() -> list:
         },
         {
             "_container": "/",
-            "type": "Blog",
+            "type": "BlogFolder",
             "id": "tech-blog",
             "title": "Awesome Tech Blog",
             "description": "My awesome technical blog",
         },
         {
             "_container": "/",
-            "type": "Blog",
+            "type": "BlogFolder",
             "id": "dumpster",
             "title": "General",
             "description": "Posts about life, universe and everything",
@@ -106,7 +106,7 @@ def all_content() -> list:
 @pytest.fixture
 def blogs_payload(all_content, filter_items) -> list:
     """Payload to create two blogs items."""
-    return filter_items(all_content, "Blog", True)
+    return filter_items(all_content, "BlogFolder", True)
 
 
 @pytest.fixture

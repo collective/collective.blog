@@ -14,5 +14,20 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="collective.blog:default"
+      source="1001"
+      destination="1002"
+      >
+    <genericsetup:upgradeDepends
+        title="Rename Blog fti as BlogFolder"
+        import_steps="typeinfo"
+        />
+    <genericsetup:upgradeStep
+        title="Update old Blog objects with new portal_type"
+        handler=".v1002.recatalog_portal_type"
+        />
+  </genericsetup:upgradeSteps>
+
 
 </configure>
