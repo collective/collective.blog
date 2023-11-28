@@ -7,6 +7,10 @@
   />
   <object meta_type="Dexterity FTI"
           name="Blog"
+          remove="True"
+  />
+  <object meta_type="Dexterity FTI"
+          name="BlogFolder"
   />
   <object meta_type="Dexterity FTI"
           name="Post"
