@@ -1,6 +1,5 @@
 from AccessControl.PermissionRole import rolesForPermissionOn
 from collective.blog.content.blog import Blog
-from copy import deepcopy
 from plone import api
 from plone.dexterity.content import DexterityContent
 from plone.dexterity.fti import DexterityFTI
@@ -9,7 +8,7 @@ from zope.component import createObject
 import pytest
 
 
-CONTENT_TYPE = "BlogFolder"
+CONTENT_TYPE = "Blog"
 
 
 @pytest.fixture
@@ -75,24 +74,6 @@ class TestBlog:
             content = api.content.create(container=self.portal, **payload)
         assert content.portal_type == CONTENT_TYPE
         assert isinstance(content, Blog)
-
-    @pytest.mark.parametrize(
-        "content_id,expected",
-        [
-            ("blog", "blog"),
-            ("a-blog", "a-blog"),
-            ("blog_name", "blog_name"),
-            ("blog-folder", "blog-folder"),
-            ("blog_folder", "blog_folder"),
-            ("blogfolder", "blogfolder"),
-        ],
-    )
-    def test_create_valid_ids(self, blogs_payload, content_id, expected):
-        payload = deepcopy(blogs_payload[0])
-        payload["id"] = content_id
-        with api.env.adopt_roles(["Manager"]):
-            content = api.content.create(container=self.portal, **payload)
-        assert content.id == expected
 
     def test_blog_info_behavior_applied(self, blog):
         from collective.blog.behaviors.blog import IBlogInfo
