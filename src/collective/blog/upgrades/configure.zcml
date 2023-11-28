@@ -23,9 +23,17 @@
         title="Rename Blog fti as BlogFolder"
         import_steps="typeinfo"
         />
+    <genericsetup:upgradeDepends
+        title="Catalog: Add blog_uid column and index"
+        import_steps="catalog"
+        />
     <genericsetup:upgradeStep
         title="Update old Blog objects with new portal_type"
         handler=".v1002.recatalog_portal_type"
+        />
+    <genericsetup:upgradeStep
+        title="Recatalog Author and Post items"
+        handler=".v1002.recatalog_blog_uid"
         />
   </genericsetup:upgradeSteps>
 

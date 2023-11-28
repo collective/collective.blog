@@ -90,6 +90,7 @@ class TestBlog:
     def test_create_valid_ids(self, blogs_payload, content_id, expected):
         payload = deepcopy(blogs_payload[0])
         payload["id"] = content_id
+        payload["safe_id"] = True
         with api.env.adopt_roles(["Manager"]):
             content = api.content.create(container=self.portal, **payload)
         assert content.id == expected

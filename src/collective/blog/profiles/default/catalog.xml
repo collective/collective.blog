@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object name="portal_catalog">
 
+  <!-- Remove old blog index and column-->
   <index meta_type="FieldIndex"
          name="blog"
+         remove="true"
   >
     <indexed_attr value="blog" />
   </index>
 
-  <column value="blog" />
+  <column remove="true"
+          value="blog"
+  />
+
+  <!-- Add new index and column-->
+  <index meta_type="FieldIndex"
+         name="blog_uid"
+  >
+    <indexed_attr value="blog_uid" />
+  </index>
+
+  <column value="blog_uid" />
 
 </object>

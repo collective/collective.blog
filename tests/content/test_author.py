@@ -68,12 +68,13 @@ class TestAuthor:
         blog_uid = api.content.get_uuid(blog)
         payload = authors_payload[0]
         # Check there is no Author connected to this blog
-        brains = api.content.find(portal_type=CONTENT_TYPE, blog=blog_uid)
+        brains = api.content.find(portal_type=CONTENT_TYPE, blog_uid=blog_uid)
         assert len(brains) == 0
         # Create an Author inside the blog
         with api.env.adopt_roles(["Manager"]):
             content = api.content.create(container=authors_folder, **payload)
 
-        brains = api.content.find(portal_type=CONTENT_TYPE, blog=blog_uid)
+        brains = api.content.find(portal_type=CONTENT_TYPE, blog_uid=blog_uid)
         assert len(brains) == 1
         assert brains[0].Title == content.title
+        assert brains[0].blog_uid == blog_uid
