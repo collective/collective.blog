@@ -12,7 +12,7 @@ class TestSetupNavigation:
         "portal_type",
         [
             "Author",
-            "Blog",
+            "BlogFolder",
             "Collection",
             "Document",
             "Event",

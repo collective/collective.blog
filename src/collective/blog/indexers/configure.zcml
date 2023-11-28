@@ -3,12 +3,12 @@
   <!-- Indexers/Metadata -->
   <adapter
       factory=".author.blog_author_indexer"
-      name="blog"
+      name="blog_uid"
       />
 
   <adapter
       factory=".post.blog_post_indexer"
-      name="blog"
+      name="blog_uid"
       />
 
 </configure>

@@ -66,4 +66,31 @@ class TestUpgradeV1002:
             brains = api.content.find(portal_type="BlogFolder")
         assert len(brains) == 1
         assert self.old_blog.portal_type == "BlogFolder"
-        assert self.old_blog.Type() == "BlogFolder"
+        assert self.old_blog.Type() == "Blog"
+
+    def test_catalog_removed_indexes_columns(self, do_upgrade):
+        do_upgrade(self.dest)
+        catalog = api.portal.get_tool("portal_catalog")
+        indexes = list(catalog.indexes())
+        columns = list(catalog.schema())
+        assert "blog" not in indexes
+        assert "blog" not in columns
+
+    def test_catalog_added_indexes_columns(self, do_upgrade):
+        do_upgrade(self.dest)
+        catalog = api.portal.get_tool("portal_catalog")
+        indexes = list(catalog.indexes())
+        columns = list(catalog.schema())
+        assert "blog_uid" in indexes
+        assert "blog_uid" in columns
+
+    def test_reindex_blog_uid(self, authors_payload, do_upgrade):
+        author_payload = authors_payload[0]
+        with api.env.adopt_roles(["Manager"]):
+            container = self.old_blog["authors"]
+            author = api.content.create(container=container, **author_payload)
+        author_blog_uid = author.blog_uid()
+        do_upgrade(self.dest)
+        with api.env.adopt_roles(["Manager"]):
+            brains = api.content.find(portal_type="Author")
+        assert brains[0].blog_uid == author_blog_uid

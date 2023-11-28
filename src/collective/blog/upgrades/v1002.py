@@ -16,12 +16,7 @@ def _migrate_existing_content(old_pt: str, new_pt: str) -> int:
         for brain in brains:
             obj = brain.getObject()
             obj.portal_type = new_pt
-            obj.reindexObject(
-                idxs=[
-                    "portal_type",
-                    "Type",
-                ],
-            )
+            obj.reindexObject()
         return total
 
 
@@ -30,4 +25,16 @@ def recatalog_portal_type(setup_tool: SetupTool):
     for old_pt, new_pt in TYPES_MAPPING:
         items = _migrate_existing_content(old_pt, new_pt)
         logger.info(f"Converted {items} {old_pt} instances")
-    logger.info("Upgrade complete")
+    logger.info("Converted old Blog instances")
+
+
+def recatalog_blog_uid(setup_tool: SetupTool):
+    """Recatalog Post and Author blog_uid."""
+    with api.env.adopt_roles(["Manager"]):
+        brains = api.content.find(portal_type=["Author", "Post"])
+        total = len(brains)
+        logger.info(f"Recatalog {total} items")
+        for brain in brains:
+            obj = brain.getObject()
+            obj.reindexObject(idxs=["blog_uid"])
+    logger.info("Reindexed blog_uid")

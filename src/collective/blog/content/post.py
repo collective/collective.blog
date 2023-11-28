@@ -1,4 +1,5 @@
 from collective.blog import _
+from collective.blog import utils
 from plone.app.z3cform.widget import AjaxSelectFieldWidget
 from plone.autoform import directives
 from plone.dexterity.content import Container
@@ -70,3 +71,7 @@ class IPost(Interface):
 @implementer(IPost)
 class Post(Container):
     """A Blog Post."""
+
+    def blog_uid(self):
+        """Return the uid of the nearest blog object."""
+        return utils.find_blog_container_uid(self)
