@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
         meta_type="Dexterity FTI"
-        name="BlogFolder"
+        name="Blog"
         i18n:domain="collective.blog"
 >
 
   <!-- Basic properties -->
   <property name="title"
             i18n:translate=""
-  >BlogFolder</property>
+  >Blog</property>
   <property name="description"
             i18n:translate=""
   >A folderish content item representing a Blog</property>

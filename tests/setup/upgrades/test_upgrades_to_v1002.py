@@ -66,7 +66,7 @@ class TestUpgradeV1002:
             brains = api.content.find(portal_type="BlogFolder")
         assert len(brains) == 1
         assert self.old_blog.portal_type == "BlogFolder"
-        assert self.old_blog.Type() == "BlogFolder"
+        assert self.old_blog.Type() == "Blog"
 
     def test_catalog_removed_indexes_columns(self, do_upgrade):
         do_upgrade(self.dest)

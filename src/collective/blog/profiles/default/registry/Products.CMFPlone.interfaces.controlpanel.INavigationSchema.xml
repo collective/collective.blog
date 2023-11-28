@@ -12,7 +12,7 @@
   >
     <value purge="false">
       <element>Author</element>
-      <element>Blog</element>
+      <element>BlogFolder</element>
     </value>
   </record>
 
