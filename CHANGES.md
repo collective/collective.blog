@@ -9,6 +9,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a4 (2023-11-28)
+
+
+### Bug fixes:
+
+- Rename Blog fti to BlogFolder, allowing contents with id blog to be added [@ericof] #42
+- Add initial blocks to auto_add_authors_container handler [@jonaspiterek] #43
+- Rename blog index and metadata to blog_uid [@ericof] #48
+
+
 ## 1.0.0a3 (2023-11-24)
 
 
