@@ -1,3 +1,4 @@
+from collective.blog import _
 from collective.blog import logger
 from collective.blog.content.blog import Blog
 from plone import api
@@ -5,6 +6,11 @@ from plone import api
 import uuid
 
 
+_AUTHORS_FOLDERISH = {
+    "id": _("authors"),
+    "title": _("Authors"),
+    "description": _("Our Authors"),
+}
 PERMISSIONS_BLOG = (
     ("collective.blog: Add Blog", []),
     ("collective.blog: Add Author", []),
@@ -35,8 +41,9 @@ def auto_add_authors_container(blog: Blog, event):
     # Create Authors container
     authors = api.content.create(
         type="Document",
-        id="authors",
-        title="Authors",
+        id=_AUTHORS_FOLDERISH["id"],
+        title=_AUTHORS_FOLDERISH["title"],
+        description=_AUTHORS_FOLDERISH["description"],
         container=blog,
     )
     # Add Blocks
