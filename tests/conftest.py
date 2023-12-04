@@ -2,11 +2,15 @@ from collective.blog.testing import ACCEPTANCE_TESTING
 from collective.blog.testing import FUNCTIONAL_TESTING
 from collective.blog.testing import INTEGRATION_TESTING
 from copy import deepcopy
+from pathlib import Path
 from plone import api
 from plone.app.testing import SITE_OWNER_NAME
 from plone.app.testing import SITE_OWNER_PASSWORD
 from plone.restapi.testing import RelativeSession
 from pytest_plone import fixtures_factory
+from pythongettext.msgfmt import Msgfmt
+from pythongettext.msgfmt import PoSyntaxError
+from typing import Generator
 
 import pytest
 
@@ -23,6 +27,26 @@ globals().update(
         )
     )
 )
+
+
+@pytest.fixture(scope="session", autouse=True)
+def generate_mo():
+    """Generate .mo files."""
+    import collective.blog
+
+    locales_path = Path(collective.blog.__file__).parent / "locales"
+    po_files: Generator = locales_path.glob("**/*.po")
+    for po_file in po_files:
+        parent: Path = po_file.parent
+        domain: str = po_file.name[: -len(po_file.suffix)]
+        mo_file: Path = parent / f"{domain}.mo"
+        try:
+            mo = Msgfmt(f"{po_file}", name=domain).getAsFile()
+        except PoSyntaxError:
+            continue
+        else:
+            with open(mo_file, "wb") as f_out:
+                f_out.write(mo.read())
 
 
 @pytest.fixture
