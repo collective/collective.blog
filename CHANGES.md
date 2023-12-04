@@ -9,6 +9,14 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a5 (2023-12-04)
+
+
+### New features:
+
+- Translate id and title for Authors folder on creation [@jonaspiterek] #50
+
+
 ## 1.0.0a4 (2023-11-28)
 
 
