@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-11-13 14:04+0000\n"
+"POT-Creation-Date: 2023-12-04 13:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,48 +16,57 @@ msgstr ""
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "A Blog Author"
-msgstr ""
+msgstr "Autor / Autora no Blog"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "A Blog Post"
 msgstr "Uma postagem no blog"
 
-#: collective/blog/profiles/default/types/Blog.xml
+#: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "A folderish content item representing a Blog"
 msgstr "Um tipo de conteúdo que representa um Blog"
 
-#: collective/blog/profiles/default/types/Blog.xml
+#: collective/blog/interfaces.py:14
+msgid "Authors container inside the Blog"
+msgstr "Pasta contendo autores dentro de um Blog"
+
+#: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "Blog"
 msgstr "Blog"
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "Blog Author"
-msgstr ""
-
-#: collective/blog/profiles/default/types/Post.xml
-msgid "Blog Post"
+msgstr "Autor"
 
 #: collective/blog/behaviors/configure.zcml:13
 msgid "Blog Behavior"
-msgstr ""
+msgstr "Blog"
+
+#: collective/blog/profiles/default/types/Post.xml
+msgid "Blog Post"
+msgstr "Postagem"
+
+#: collective/blog/controlpanel/controlpanel.py:16
+msgid "Blog Settings"
+msgstr "Configurações do Blog"
 
 #: collective/blog/profiles.zcml:13
-msgid "Blog: Install"
-msgstr "Blog: Instalação"
+msgid "Blog Support for Plone"
+msgstr "Blog suporte para Plone"
 
 #: collective/blog/profiles.zcml:21
-msgid "Blog: Uninstall"
-msgstr "Blog: Remover"
+msgid "Blog Support for Plone: Uninstall"
+msgstr "Blog: Remover suporte"
 
 #: collective/blog/profiles/default/types/Author.xml
-#: collective/blog/profiles/default/types/Blog.xml
+#: collective/blog/profiles/default/types/BlogFolder.xml
 #: collective/blog/profiles/default/types/Post.xml
 msgid "Edit"
 msgstr "Editar"
 
 #: collective/blog/behaviors/configure.zcml:13
 msgid "Implements a blog behavior on a content type"
-msgstr ""
+msgstr "Implementa o comportamento de blog para um tipo de conteúdo"
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
@@ -65,45 +74,65 @@ msgstr "Pacote que configura tipos de conteúdo para blogs"
 
 #: collective/blog/profiles.zcml:21
 msgid "Uninstall Blog setup."
-msgstr ""
+msgstr "Remover suporte a Blogs"
 
 #: collective/blog/profiles/default/types/Author.xml
-#: collective/blog/profiles/default/types/Blog.xml
+#: collective/blog/profiles/default/types/BlogFolder.xml
 #: collective/blog/profiles/default/types/Post.xml
 msgid "View"
 msgstr "Visão"
 
+#. Default: "Our Authors"
+#: collective/blog/subscribers/blog.py:12
+msgid "authors_folder_desc"
+msgstr "Autores deste blog"
+
+#. Default: "authors"
+#: collective/blog/subscribers/blog.py:10
+msgid "authors_folder_id"
+msgstr "autores"
+
+#. Default: "Authors"
+#: collective/blog/subscribers/blog.py:11
+msgid "authors_folder_title"
+msgstr "Autores"
+
 #. Default: "Contributors"
-#: collective/blog/content/post.py:41
+#: collective/blog/content/post.py:42
 msgid "contributors"
 msgstr "Contribuidores"
 
 #. Default: "Persons responsible for creating the content of this post. Please enter a list of user names, one per line. The principal creator should come first."
-#: collective/blog/content/post.py:25
+#: collective/blog/content/post.py:26
 msgid "help_authors"
 msgstr "Pessoas responsáveis por esta postagem."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
-#: collective/blog/content/post.py:42
+#: collective/blog/content/post.py:43
 msgid "help_contributors"
 msgstr "Pessoas que contribuiram para esta postagem."
 
 #. Default: "Copyright statement or other rights information on this item."
-#: collective/blog/content/post.py:58
+#: collective/blog/content/post.py:59
 msgid "help_copyrights"
 msgstr "Informações sobre direitos autorais desta postagem."
 
+#. Default: "Should we create the Authors container inside the Blog?"
+#: collective/blog/interfaces.py:15
+msgid "help_enable_authors_folder"
+msgstr "Habilitamos a criação da pasta de autores dentro do Blog?"
+
 #. Default: "Authors"
-#: collective/blog/content/post.py:24
+#: collective/blog/content/post.py:25
 msgid "label_authors"
 msgstr "Autores"
 
 #. Default: "Rights"
-#: collective/blog/content/post.py:57
+#: collective/blog/content/post.py:58
 msgid "label_copyrights"
 msgstr "Direitos Autorais"
 
 #. Default: "Metadata"
-#: collective/blog/content/post.py:19
+#: collective/blog/content/post.py:20
 msgid "label_schema_metadata"
 msgstr "Metadados"
