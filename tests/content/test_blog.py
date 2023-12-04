@@ -35,12 +35,14 @@ def disable_authors(portal):
     api.portal.set_registry_record(key, True)
 
 
-class TestBlog:
+class TestBaseBlog:
     @pytest.fixture(autouse=True)
     def _fti(self, get_fti, integration, portal):
         self.fti = get_fti(CONTENT_TYPE)
         self.portal = portal
 
+
+class TestBlog(TestBaseBlog):
     def test_fti(self):
         assert isinstance(self.fti, DexterityFTI)
 
@@ -107,6 +109,8 @@ class TestBlog:
 
         assert len(brains) == 2
 
+
+class TestBlogAuthorsFolder(TestBaseBlog):
     def test_authors_folder_creation(self, blogs_payload):
         payload = blogs_payload[0]
         with api.env.adopt_roles(["Manager"]):
@@ -143,3 +147,21 @@ class TestBlog:
         with api.env.adopt_roles(["Manager"]):
             content = api.content.create(container=self.portal, **payload)
         assert "authors" not in content.objectIds()
+
+    @pytest.mark.parametrize(
+        "lang,o_id,o_title",
+        [
+            ("en", "authors", "Authors"),
+            ("de", "autoren", "Autoren"),
+            ("pt-br", "autores", "Autores"),
+        ],
+    )
+    def test_authors_folder_translated(
+        self, blogs_payload, lang: str, o_id: str, o_title: str
+    ):
+        payload = deepcopy(blogs_payload[0])
+        payload["language"] = lang
+        with api.env.adopt_roles(["Manager"]):
+            content = api.content.create(container=self.portal, **payload)
+        assert o_id in content.objectIds()
+        assert content[o_id].title == o_title

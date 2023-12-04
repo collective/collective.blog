@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-12-01 11:10+0000\n"
+"POT-Creation-Date: 2023-12-04 13:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "A Blog Author"
-msgstr ""
+msgstr "Autor / Autora no Blog"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "A Blog Post"
@@ -26,13 +26,9 @@ msgstr "Uma postagem no blog"
 msgid "A folderish content item representing a Blog"
 msgstr "Um tipo de conteúdo que representa um Blog"
 
-#: collective/blog/subscribers/blog.py:11
-msgid "Authors"
-msgstr ""
-
 #: collective/blog/interfaces.py:14
 msgid "Authors container inside the Blog"
-msgstr ""
+msgstr "Pasta contendo autores dentro de um Blog"
 
 #: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "Blog"
@@ -40,27 +36,27 @@ msgstr "Blog"
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "Blog Author"
-msgstr ""
+msgstr "Autor"
 
 #: collective/blog/behaviors/configure.zcml:13
 msgid "Blog Behavior"
-msgstr ""
+msgstr "Blog"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "Blog Post"
-msgstr ""
+msgstr "Postagem"
 
 #: collective/blog/controlpanel/controlpanel.py:16
 msgid "Blog Settings"
-msgstr ""
+msgstr "Configurações do Blog"
 
 #: collective/blog/profiles.zcml:13
 msgid "Blog Support for Plone"
-msgstr ""
+msgstr "Blog suporte para Plone"
 
 #: collective/blog/profiles.zcml:21
 msgid "Blog Support for Plone: Uninstall"
-msgstr ""
+msgstr "Blog: Remover suporte"
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
@@ -70,11 +66,7 @@ msgstr "Editar"
 
 #: collective/blog/behaviors/configure.zcml:13
 msgid "Implements a blog behavior on a content type"
-msgstr ""
-
-#: collective/blog/subscribers/blog.py:12
-msgid "Our Authors"
-msgstr ""
+msgstr "Implementa o comportamento de blog para um tipo de conteúdo"
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
@@ -82,7 +74,7 @@ msgstr "Pacote que configura tipos de conteúdo para blogs"
 
 #: collective/blog/profiles.zcml:21
 msgid "Uninstall Blog setup."
-msgstr ""
+msgstr "Remover suporte a Blogs"
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
@@ -90,9 +82,20 @@ msgstr ""
 msgid "View"
 msgstr "Visão"
 
+#. Default: "Our Authors"
+#: collective/blog/subscribers/blog.py:12
+msgid "authors_folder_desc"
+msgstr "Autores deste blog"
+
+#. Default: "authors"
 #: collective/blog/subscribers/blog.py:10
-msgid "authors"
-msgstr ""
+msgid "authors_folder_id"
+msgstr "autores"
+
+#. Default: "Authors"
+#: collective/blog/subscribers/blog.py:11
+msgid "authors_folder_title"
+msgstr "Autores"
 
 #. Default: "Contributors"
 #: collective/blog/content/post.py:42
@@ -117,7 +120,7 @@ msgstr "Informações sobre direitos autorais desta postagem."
 #. Default: "Should we create the Authors container inside the Blog?"
 #: collective/blog/interfaces.py:15
 msgid "help_enable_authors_folder"
-msgstr ""
+msgstr "Habilitamos a criação da pasta de autores dentro do Blog?"
 
 #. Default: "Authors"
 #: collective/blog/content/post.py:25
