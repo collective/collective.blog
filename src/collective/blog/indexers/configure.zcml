@@ -11,4 +11,9 @@
       name="blog_uid"
       />
 
+  <adapter
+      factory=".post.post_authors"
+      name="post_authors"
+      />
+
 </configure>
