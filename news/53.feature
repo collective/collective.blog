@@ -1,1 +1,0 @@
-- Add indexer for indexing authors from a blog post [@jonaspiterek]

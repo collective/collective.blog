@@ -9,6 +9,14 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a6 (2024-01-29)
+
+
+### New features:
+
+- - Add indexer for indexing authors from a blog post [@jonaspiterek] #53
+
+
 ## 1.0.0a5 (2023-12-04)
 
 
