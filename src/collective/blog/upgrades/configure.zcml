@@ -37,5 +37,19 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="collective.blog:default"
+      source="1002"
+      destination="1003"
+      >
+    <genericsetup:upgradeDepends
+        title="Catalog: Add post_authors column and index"
+        import_steps="catalog"
+        />
+    <genericsetup:upgradeStep
+        title="Recatalog Posts"
+        handler=".v1003.recatalog_post_authors"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

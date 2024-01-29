@@ -22,4 +22,14 @@
 
   <column value="blog_uid" />
 
+  <!-- Add new index and column-->
+  <index meta_type="KeywordIndex"
+         name="post_authors"
+  >
+    <indexed_attr value="post_authors" />
+  </index>
+
+  <column value="post_authors" />
+
+
 </object>
