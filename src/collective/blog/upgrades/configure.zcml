@@ -52,4 +52,18 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="collective.blog:default"
+      source="1003"
+      destination="1004"
+      >
+    <genericsetup:upgradeDepends
+        title="Blog type: Disallow creation outsite a Blog Folder"
+        import_steps="rolemap"
+        />
+    <genericsetup:upgradeDepends
+        title="Blog type: Set global_allow to true"
+        import_steps="types"
+        />
+  </genericsetup:upgradeSteps>
 </configure>

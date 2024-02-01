@@ -17,6 +17,16 @@ _AUTHORS_FOLDERISH = {
 PERMISSIONS_BLOG = (
     ("collective.blog: Add Blog", []),
     ("collective.blog: Add Author", []),
+    (
+        "collective.blog: Add Post",
+        [
+            "Manager",
+            "Site Administrator",
+            "Owner",
+            "Editor",
+            "Contributor",
+        ],
+    ),
 )
 
 PERMISSIONS_AUTHORS = (
@@ -47,15 +57,16 @@ def _log_permission_change(path: str, permission_id: str, roles: list):
 
 
 def auto_add_authors_container(blog: Blog, event):
+    blog_path = "/".join(blog.getPhysicalPath())
+    for permission_id, roles in PERMISSIONS_BLOG:
+        blog.manage_permission(permission_id, roles=roles, acquire=False)
+        _log_permission_change(blog_path, permission_id, roles)
+
     key = "collective.blog.settings.enable_authors_folder"
     enabled = api.portal.get_registry_record(key, default=True)
     if not enabled:
         logger.info("Ignoring Authors folder creation")
         return
-    blog_path = "/".join(blog.getPhysicalPath())
-    for permission_id, roles in PERMISSIONS_BLOG:
-        blog.manage_permission(permission_id, roles=roles, acquire=False)
-        _log_permission_change(blog_path, permission_id, roles)
     lang = blog.language
     # Create Authors container
     authors = api.content.create(
