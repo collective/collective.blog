@@ -17,5 +17,5 @@ def post_authors(obj: Post):
     uids = obj.creators
     brains = api.content.find(portal_type="Author", UID=uids)
     for brain in brains:
-        authors.append(brain.title)
+        authors.append(brain.Title)
     return authors
