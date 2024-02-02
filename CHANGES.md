@@ -9,6 +9,18 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a7 (2024-02-02)
+
+
+### New features:
+
+- Allow a Blog Post to be created inside a subfolder of a Blog #54
+
+
+### Bug fixes:
+
+- Refactor post_authors indexer to avoid repeated calls to the catalog #56
+
 ## 1.0.0a6 (2024-01-29)
 
 

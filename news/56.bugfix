@@ -1,1 +1,0 @@
-Refactor post_authors indexer to avoid repeated calls to the catalog
