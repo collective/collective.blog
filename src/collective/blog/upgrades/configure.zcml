@@ -63,7 +63,7 @@
         />
     <genericsetup:upgradeDepends
         title="Blog type: Set global_allow to true"
-        import_steps="types"
+        import_steps="typeinfo"
         />
   </genericsetup:upgradeSteps>
 </configure>
