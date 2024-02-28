@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a8 (2024-02-28)
+
+
+### Bug fixes:
+
+- Limit authors vocabulary to authors from the current blog context. @davisagli #59
+
 ## 1.0.0a7 (2024-02-02)
 
 
