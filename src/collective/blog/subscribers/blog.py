@@ -129,3 +129,5 @@ def create_tags_container(blog: Blog):
     for permission_id, roles in PERMISSIONS_TAGS:
         tags.manage_permission(permission_id, roles=roles, acquire=False)
         _log_permission_change(tags_path, permission_id, roles)
+
+    return tags
