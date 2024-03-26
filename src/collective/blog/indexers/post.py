@@ -19,3 +19,9 @@ def post_authors(obj: Post):
     for brain in brains:
         authors.append(brain.Title)
     return authors
+
+
+@indexer(IPost)
+def blog_tags(obj: Post):
+    """Returns the tags of a blog post."""
+    return obj.tags

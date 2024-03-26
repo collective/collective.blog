@@ -66,4 +66,19 @@
         import_steps="typeinfo"
         />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      profile="collective.blog:default"
+      source="1004"
+      destination="1005"
+      >
+    <genericsetup:upgradeDepends
+        title="Add Blog Tag content type"
+        import_steps="catalog typeinfo rolemap difftool repositorytool"
+        />
+    <genericsetup:upgradeStep
+        title="Update registry with new blog setting"
+        handler=".v1005.update_registry_records"
+        />
+  </genericsetup:upgradeSteps>
 </configure>

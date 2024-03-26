@@ -18,7 +18,7 @@ class IPost(Interface):
     model.fieldset(
         "metadata",
         label=_("label_schema_metadata", default="Metadata"),
-        fields=["creators", "contributors", "rights"],
+        fields=["creators", "contributors", "rights", "tags"],
     )
 
     creators = schema.Tuple(
@@ -66,6 +66,14 @@ class IPost(Interface):
     directives.omitted("creators", "contributors", "rights")
     directives.no_omit(IEditForm, "creators", "contributors", "rights")
     directives.no_omit(IAddForm, "creators", "contributors", "rights")
+
+    tags = schema.Tuple(
+        title=_("label_tags", default="Tags"),
+        value_type=schema.TextLine(),
+        required=False,
+        missing_value=(),
+    )
+    directives.widget("tags", AjaxSelectFieldWidget, vocabulary="collective.blog.tags")
 
 
 @implementer(IPost)

@@ -1,9 +1,12 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
-  <!-- Authors Vocabularies -->
   <utility
       name="collective.blog.authors"
       component=".authors.authors_vocabulary"
+      />
+  <utility
+      name="collective.blog.tags"
+      component=".tags.tags_vocabulary"
       />
 
 </configure>

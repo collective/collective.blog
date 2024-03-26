@@ -19,3 +19,13 @@ class IBlogSettings(Interface):
         required=False,
         default=True,
     )
+
+    enable_tags_folder = schema.Bool(
+        title=_("Tags container inside the Blog"),
+        description=_(
+            "help_enable_tags_folder",
+            default="Should we create the Tags container inside the Blog?",
+        ),
+        required=False,
+        default=True,
+    )

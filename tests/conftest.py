@@ -124,6 +124,14 @@ def all_content() -> list:
             "title": "New package: collective.blog",
             "description": "This is a new cool package for Plone",
         },
+        {
+            "_container": "/tech-blog/tags",
+            "_preview_image_link": "/an-image",
+            "type": "BlogTag",
+            "id": "retrocomputing",
+            "title": "Retrocomputing",
+            "description": "Posts about retrocomputing",
+        },
     ]
 
 
@@ -137,6 +145,12 @@ def blogs_payload(all_content, filter_items) -> list:
 def authors_payload(all_content, filter_items) -> list:
     """Payload to create two author items."""
     return filter_items(all_content, "Author", True)
+
+
+@pytest.fixture
+def tags_payload(all_content, filter_items) -> list:
+    """Payload to create a tag item."""
+    return filter_items(all_content, "BlogTag", True)
 
 
 @pytest.fixture
@@ -166,6 +180,20 @@ def authors(blogs, authors_payload) -> dict:
         authors = blog.authors
         for data in authors_payload:
             content = api.content.create(container=authors, **data)
+            response[content.UID()] = content.title
+    return response
+
+
+@pytest.fixture
+def tags(blogs, tags_payload) -> dict:
+    """Create BlogTag content items."""
+    response = {}
+    blog_uuid = list(blogs.keys())
+    with api.env.adopt_roles(["Manager"]):
+        blog = api.content.get(UID=blog_uuid[0])
+        tags = blog.tags
+        for data in tags_payload:
+            content = api.content.create(container=tags, **data)
             response[content.UID()] = content.title
     return response
 

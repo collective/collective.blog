@@ -7,13 +7,13 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 
 @provider(IVocabularyFactory)
-def authors_vocabulary(context):
-    """Vocabulary of authors from the current blog."""
+def tags_vocabulary(context):
+    """Vocabulary of tags from the current blog."""
     terms = []
     blog_uid = find_blog_container_uid(context)
     if blog_uid:
         brains = api.content.find(
-            blog_uid=blog_uid, portal_type="Author", sort_on="sortable_title"
+            blog_uid=blog_uid, portal_type="BlogTag", sort_on="sortable_title"
         )
         for brain in brains:
             token = brain.UID

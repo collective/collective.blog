@@ -8,28 +8,32 @@
   >
     <indexed_attr value="blog" />
   </index>
-
   <column remove="true"
           value="blog"
   />
 
-  <!-- Add new index and column-->
+  <!-- blog_uid index and column -->
   <index meta_type="FieldIndex"
          name="blog_uid"
   >
     <indexed_attr value="blog_uid" />
   </index>
-
   <column value="blog_uid" />
 
-  <!-- Add new index and column-->
+  <!-- post_authors index and column -->
   <index meta_type="KeywordIndex"
          name="post_authors"
   >
     <indexed_attr value="post_authors" />
   </index>
-
   <column value="post_authors" />
 
+  <!-- blog_tags index and column -->
+  <index meta_type="KeywordIndex"
+         name="blog_tags"
+  >
+    <indexed_attr value="tags" />
+  </index>
+  <column value="blog_tags" />
 
 </object>
