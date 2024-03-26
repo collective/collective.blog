@@ -6,6 +6,12 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 
+class TermWithUrl(SimpleTerm):
+    def __init__(self, value, url, token=None, title=None):
+        super().__init__(value, token, title)
+        self.url = url
+
+
 @provider(IVocabularyFactory)
 def tags_vocabulary(context):
     """Vocabulary of tags from the current blog."""
@@ -18,5 +24,5 @@ def tags_vocabulary(context):
         for brain in brains:
             token = brain.UID
             title = brain.Title
-            terms.append(SimpleTerm(token, token, title))
+            terms.append(TermWithUrl(token, brain.getURL(), token, title))
     return SimpleVocabulary(terms)
