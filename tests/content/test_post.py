@@ -90,3 +90,13 @@ class TestPost:
             content = api.content.create(container=container, **payload)
         assert content.portal_type == CONTENT_TYPE
         assert isinstance(content, Post)
+
+    def test_query_posts_by_tag(self, tags_payload, posts_payload):
+        blog = self.blog
+        with api.env.adopt_roles(["Manager"]):
+            tag = api.content.create(container=blog.tags, **tags_payload[0])
+            api.content.create(
+                container=blog, **posts_payload[0], blog_tags=[tag.UID()]
+            )
+        result = api.content.find(blog_tags=tag.UID())
+        assert len(result) == 1

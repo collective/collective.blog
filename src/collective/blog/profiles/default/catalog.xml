@@ -32,7 +32,7 @@
   <index meta_type="KeywordIndex"
          name="blog_tags"
   >
-    <indexed_attr value="tags" />
+    <indexed_attr value="blog_tags" />
   </index>
   <column value="blog_tags" />
 

@@ -37,6 +37,7 @@
   <property name="behaviors"
             purge="false"
   >
+    <element value="collective.blog.tags" />
     <element value="plone.basic" />
     <element value="plone.categorization" />
     <element value="plone.publication" />

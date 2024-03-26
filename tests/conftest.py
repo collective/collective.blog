@@ -199,16 +199,18 @@ def tags(blogs, tags_payload) -> dict:
 
 
 @pytest.fixture
-def posts(portal, authors, blogs, posts_payload) -> dict:
+def posts(portal, authors, tags, blogs, posts_payload) -> dict:
     """Create Blogs, Authors and Posts."""
     response = {}
     authors_uuid = list(authors.keys())
     blog_uuid = list(blogs.keys())
+    tags_uuid = list(tags.keys())
     with api.env.adopt_roles(["Manager"]):
         blog = api.content.get(UID=blog_uuid[0])
         for data in posts_payload:
-            # Add one author
+            # Add one author and one tag
             data["creators"] = [authors_uuid[0]]
+            data["blog_tags"] = [tags_uuid[0]]
             content = api.content.create(container=blog, **data)
             response[content.UID()] = content.title
     return response

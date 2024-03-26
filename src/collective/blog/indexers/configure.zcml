@@ -12,7 +12,7 @@
       />
 
   <adapter
-      factory=".tag.blog_tag_indexer"
+      factory=".tag.tag_blog_uid_indexer"
       name="blog_uid"
       />
 
@@ -22,7 +22,7 @@
       />
 
   <adapter
-      factory=".post.blog_tags"
+      factory=".tag.blog_tags"
       name="blog_tags"
       />
 
