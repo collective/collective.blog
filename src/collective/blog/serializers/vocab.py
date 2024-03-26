@@ -7,6 +7,7 @@ from zope.interface import Interface
 @adapter(TermWithUrl, Interface)
 class SerializeTermWithUrlToJson(SerializeTermToJson):
     """Include url in serialized term"""
+
     def __call__(self):
         result = super().__call__()
         result["url"] = self.context.url
