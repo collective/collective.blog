@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a9 (2024-03-27)
+
+
+### New features:
+
+- Added Blog Tag content type. A tags folder is created for new blogs, but not existing ones. @davisagli #61
+
 ## 1.0.0a8 (2024-02-28)
 
 
