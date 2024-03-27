@@ -18,7 +18,8 @@ def tags_vocabulary(context):
     terms = []
     blog_uid = find_blog_container_uid(context)
     if blog_uid:
-        brains = api.content.find(
+        catalog = api.portal.get_tool("portal_catalog")
+        brains = catalog.unrestrictedSearchResults(
             blog_uid=blog_uid, portal_type="BlogTag", sort_on="sortable_title"
         )
         for brain in brains:

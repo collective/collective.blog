@@ -172,7 +172,7 @@ msgstr "Autoren"
 #. Default: "Tags"
 #: collective/blog/behaviors/tags.py:16
 msgid "label_blog_tags"
-msgstr "Blog Stichwörter"
+msgstr "Stichworte"
 
 #. Default: "Rights"
 #: collective/blog/content/post.py:58
