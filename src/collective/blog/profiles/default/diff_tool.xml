@@ -11,6 +11,11 @@
              name="any"
       />
     </type>
+    <type portal_type="BlogTag">
+      <field difftype="Compound Diff for Dexterity types"
+             name="any"
+      />
+    </type>
     <type portal_type="Post">
       <field difftype="Compound Diff for Dexterity types"
              name="any"

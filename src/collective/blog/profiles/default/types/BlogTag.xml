@@ -1,47 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
         meta_type="Dexterity FTI"
-        name="Blog Post"
+        name="BlogTag"
         i18n:domain="collective.blog"
 >
 
   <!-- Basic properties -->
   <property name="title"
             i18n:translate=""
-  >Blog Post</property>
+  >Blog Tag</property>
   <property name="description"
             i18n:translate=""
-  >A Blog Post</property>
+  >A Blog tag</property>
 
-  <property name="allow_discussion">True</property>
-  <property name="factory">Post</property>
+  <property name="allow_discussion">False</property>
+  <property name="factory">BlogTag</property>
   <property name="icon_expr" />
   <property name="link_target" />
 
   <!-- Hierarchy control -->
-  <property name="allowed_content_types">
-    <element value="File" />
-    <element value="Image" />
-  </property>
-  <property name="filter_content_types">True</property>
+  <property name="allowed_content_types" />
+  <property name="filter_content_types">False</property>
   <property name="global_allow">True</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">collective.blog.post.add</property>
-  <property name="klass">collective.blog.content.post.Post</property>
+  <property name="add_permission">collective.blog.tag.add</property>
+  <property name="klass">collective.blog.content.tag.BlogTag</property>
   <property name="model_file" />
   <property name="model_source" />
-  <property name="schema">collective.blog.content.post.IPost</property>
+  <property name="schema">collective.blog.content.tag.IBlogTag</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors"
             purge="false"
   >
-    <element value="collective.blog.tags" />
-    <element value="plone.basic" />
-    <element value="plone.categorization" />
-    <element value="plone.publication" />
-    <element value="plone.allowdiscussion" />
+    <element value="plone.dublincore" />
     <element value="plone.namefromtitle" />
     <element value="plone.shortname" />
     <element value="plone.excludefromnavigation" />
@@ -54,7 +47,7 @@
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++Post</property>
+  <property name="add_view_expr">string:${folder_url}/++add++BlogTag</property>
   <property name="immediate_view">view</property>
   <property name="default_view">view</property>
   <property name="default_view_fallback">False</property>

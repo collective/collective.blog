@@ -18,6 +18,10 @@
         id="collective.blog.post.add"
         title="collective.blog: Add Post"
         />
+    <permission
+        id="collective.blog.tag.add"
+        title="collective.blog: Add Tag"
+        />
 
   </configure>
 

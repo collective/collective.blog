@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-12-04 13:40+0000\n"
+"POT-Creation-Date: 2024-03-27 16:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,14 +25,27 @@ msgstr ""
 msgid "A Blog Post"
 msgstr ""
 
+#: collective/blog/profiles/default/types/BlogTag.xml
+msgid "A Blog tag"
+msgstr ""
+
 #: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "A folderish content item representing a Blog"
+msgstr ""
+
+#: collective/blog/behaviors/configure.zcml:18
+msgid "Adds a field to categorize blog posts using tags"
+msgstr ""
+
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Author"
 msgstr ""
 
 #: collective/blog/interfaces.py:14
 msgid "Authors container inside the Blog"
 msgstr ""
 
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "Blog"
 msgstr ""
@@ -41,7 +54,7 @@ msgstr ""
 msgid "Blog Author"
 msgstr ""
 
-#: collective/blog/behaviors/configure.zcml:13
+#: collective/blog/behaviors/configure.zcml:12
 msgid "Blog Behavior"
 msgstr ""
 
@@ -61,18 +74,42 @@ msgstr ""
 msgid "Blog Support for Plone: Uninstall"
 msgstr ""
 
+#: collective/blog/profiles/default/types/BlogTag.xml
+msgid "Blog Tag"
+msgstr ""
+
+#: collective/blog/behaviors/configure.zcml:18
+msgid "Blog Tags"
+msgstr ""
+
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Categorization by Authors."
+msgstr ""
+
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Categorization by Tags."
+msgstr ""
+
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
-#: collective/blog/profiles/default/types/Post.xml
+#: collective/blog/profiles/default/types/BlogTag.xml
 msgid "Edit"
 msgstr ""
 
-#: collective/blog/behaviors/configure.zcml:13
+#: collective/blog/behaviors/configure.zcml:12
 msgid "Implements a blog behavior on a content type"
 msgstr ""
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
+msgstr ""
+
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Tag"
+msgstr ""
+
+#: collective/blog/interfaces.py:24
+msgid "Tags container inside the Blog"
 msgstr ""
 
 #: collective/blog/profiles.zcml:21
@@ -81,22 +118,22 @@ msgstr ""
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
-#: collective/blog/profiles/default/types/Post.xml
+#: collective/blog/profiles/default/types/BlogTag.xml
 msgid "View"
 msgstr ""
 
 #. Default: "Our Authors"
-#: collective/blog/subscribers/blog.py:12
+#: collective/blog/subscribers/blog.py:14
 msgid "authors_folder_desc"
 msgstr ""
 
 #. Default: "authors"
-#: collective/blog/subscribers/blog.py:10
+#: collective/blog/subscribers/blog.py:12
 msgid "authors_folder_id"
 msgstr ""
 
 #. Default: "Authors"
-#: collective/blog/subscribers/blog.py:11
+#: collective/blog/subscribers/blog.py:13
 msgid "authors_folder_title"
 msgstr ""
 
@@ -125,9 +162,19 @@ msgstr ""
 msgid "help_enable_authors_folder"
 msgstr ""
 
+#. Default: "Should we create the Tags container inside the Blog?"
+#: collective/blog/interfaces.py:25
+msgid "help_enable_tags_folder"
+msgstr ""
+
 #. Default: "Authors"
 #: collective/blog/content/post.py:25
 msgid "label_authors"
+msgstr ""
+
+#. Default: "Tags"
+#: collective/blog/behaviors/tags.py:21
+msgid "label_blog_tags"
 msgstr ""
 
 #. Default: "Rights"
@@ -136,6 +183,21 @@ msgid "label_copyrights"
 msgstr ""
 
 #. Default: "Metadata"
+#: collective/blog/behaviors/tags.py:17
 #: collective/blog/content/post.py:20
 msgid "label_schema_metadata"
+msgstr ""
+
+#: collective/blog/subscribers/blog.py:20
+msgid "tags_folder_desc"
+msgstr ""
+
+#. Default: "tags"
+#: collective/blog/subscribers/blog.py:18
+msgid "tags_folder_id"
+msgstr ""
+
+#. Default: "Tags"
+#: collective/blog/subscribers/blog.py:19
+msgid "tags_folder_title"
 msgstr ""

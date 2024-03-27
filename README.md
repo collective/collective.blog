@@ -29,15 +29,14 @@
 
 ### Content Types
 
-| name    | context                         |
-| ------- | ------------------------------- |
-| `Blog` | A folderish content type that supports adding Posts and Authors |
-| `Blog Author` | An Author in a blog |
-| `Blog Post` | A Post in a blog |
+| name          | context                                                         |
+| ------------- | --------------------------------------------------------------- |
+| `Blog`        | A folderish content type that supports adding Posts and Authors |
+| `Blog Author` | An Author in a blog                                             |
+| `Blog Tag`    | A Tag for categorizing posts in a blog                          |
+| `Blog Post`   | A Post in a blog                                                |
 
-
-Installation
-------------
+## Installation
 
 Add `collective.blog` as a dependency on your package's `setup.py`
 

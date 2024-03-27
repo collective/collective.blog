@@ -16,5 +16,8 @@
     <permission acquire="False"
                 name="collective.blog: Add Post"
     />
+    <permission acquire="False"
+                name="collective.blog: Add Tag"
+    />
   </permissions>
 </rolemap>

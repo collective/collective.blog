@@ -13,6 +13,9 @@
           name="BlogFolder"
   />
   <object meta_type="Dexterity FTI"
+          name="BlogTag"
+  />
+  <object meta_type="Dexterity FTI"
           name="Post"
   />
 

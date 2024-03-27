@@ -1,16 +1,17 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
-  <!-- Serializers -->
-
+  <!-- summary serializer -->
   <utility
       factory=".summary.JSONSummarySerializerMetadata"
       name="collective.blog.summary_serializer_metadata"
       />
 
-
   <!-- Content Type Serializers -->
   <adapter factory=".author.AuthorJSONSerializer" />
   <adapter factory=".blog.BlogJSONSerializer" />
   <adapter factory=".post.PostJSONSerializer" />
+
+  <!-- Special serializer for tag vocab terms -->
+  <adapter factory=".vocab.SerializeTermWithUrlToJson" />
 
 </configure>

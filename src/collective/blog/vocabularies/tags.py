@@ -6,17 +6,24 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 
+class TermWithUrl(SimpleTerm):
+    def __init__(self, value, url, token=None, title=None):
+        super().__init__(value, token, title)
+        self.url = url
+
+
 @provider(IVocabularyFactory)
-def authors_vocabulary(context):
-    """Vocabulary of authors from the current blog."""
+def tags_vocabulary(context):
+    """Vocabulary of tags from the current blog."""
     terms = []
     blog_uid = find_blog_container_uid(context)
     if blog_uid:
-        brains = api.content.find(
-            blog_uid=blog_uid, portal_type="Author", sort_on="sortable_title"
+        catalog = api.portal.get_tool("portal_catalog")
+        brains = catalog.unrestrictedSearchResults(
+            blog_uid=blog_uid, portal_type="BlogTag", sort_on="sortable_title"
         )
         for brain in brains:
             token = brain.UID
             title = brain.Title
-            terms.append(SimpleTerm(token, token, title))
+            terms.append(TermWithUrl(token, brain.getURL(), token, title))
     return SimpleVocabulary(terms)
