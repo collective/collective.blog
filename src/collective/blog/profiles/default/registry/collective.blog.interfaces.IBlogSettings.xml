@@ -5,9 +5,6 @@
   <!-- Blog Settings -->
   <records interface="collective.blog.interfaces.IBlogSettings"
            prefix="collective.blog.settings"
-  >
-    <value key="enable_authors_folder">True</value>
-    <value key="enable_tags_folder">True</value>
-  </records>
+  />
 
 </registry>
