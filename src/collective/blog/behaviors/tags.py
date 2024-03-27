@@ -11,7 +11,11 @@ from zope.interface import provider
 class IBlogTags(model.Schema):
     """Behavior adding the blog_tags field"""
 
-    model.fieldset("categorization", fields=["blog_tags"])
+    model.fieldset(
+        "metadata",
+        label=_("label_schema_metadata", default="Metadata"),
+        fields=["blog_tags"],
+    )
     blog_tags = schema.Tuple(
         title=_("label_blog_tags", default="Tags"),
         value_type=schema.TextLine(),

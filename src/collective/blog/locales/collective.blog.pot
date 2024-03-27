@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-03-27 04:20+0000\n"
+"POT-Creation-Date: 2024-03-27 16:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,7 +173,7 @@ msgid "label_authors"
 msgstr ""
 
 #. Default: "Tags"
-#: collective/blog/behaviors/tags.py:16
+#: collective/blog/behaviors/tags.py:21
 msgid "label_blog_tags"
 msgstr ""
 
@@ -183,6 +183,7 @@ msgid "label_copyrights"
 msgstr ""
 
 #. Default: "Metadata"
+#: collective/blog/behaviors/tags.py:17
 #: collective/blog/content/post.py:20
 msgid "label_schema_metadata"
 msgstr ""
