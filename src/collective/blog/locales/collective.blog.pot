@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-03-26 18:40+0000\n"
+"POT-Creation-Date: 2024-03-27 04:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,10 +37,15 @@ msgstr ""
 msgid "Adds a field to categorize blog posts using tags"
 msgstr ""
 
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Author"
+msgstr ""
+
 #: collective/blog/interfaces.py:14
 msgid "Authors container inside the Blog"
 msgstr ""
 
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "Blog"
 msgstr ""
@@ -77,6 +82,14 @@ msgstr ""
 msgid "Blog Tags"
 msgstr ""
 
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Categorization by Authors."
+msgstr ""
+
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Categorization by Tags."
+msgstr ""
+
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
 #: collective/blog/profiles/default/types/BlogTag.xml
@@ -89,6 +102,10 @@ msgstr ""
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
+msgstr ""
+
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
+msgid "Tag"
 msgstr ""
 
 #: collective/blog/interfaces.py:24
