@@ -9,6 +9,19 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a10 (2024-03-28)
+
+
+### New features:
+
+- - Update German translations [@jonaspiterek] #63
+- Update Brazilian Portuguese translations [@ericof] #67
+
+
+### Internal:
+
+- Add a GitHub Actions workflow to automatically check for Changelog entries on pull requests [@ericof] #65
+
 ## 1.0.0a9 (2024-03-27)
 
 

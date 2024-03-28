@@ -1,1 +1,0 @@
-- Update German translations [@jonaspiterek]
