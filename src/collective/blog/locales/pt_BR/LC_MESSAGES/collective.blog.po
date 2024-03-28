@@ -24,7 +24,7 @@ msgstr "Uma postagem no blog"
 
 #: collective/blog/profiles/default/types/BlogTag.xml
 msgid "A Blog tag"
-msgstr ""
+msgstr "Uma tag no blog"
 
 #: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "A folderish content item representing a Blog"
@@ -32,11 +32,11 @@ msgstr "Um tipo de conteúdo que representa um Blog"
 
 #: collective/blog/behaviors/configure.zcml:18
 msgid "Adds a field to categorize blog posts using tags"
-msgstr ""
+msgstr "Adiciona um campo para categorizar posts utilizando tags"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Author"
-msgstr ""
+msgstr "Autor/Autora"
 
 #: collective/blog/interfaces.py:14
 msgid "Authors container inside the Blog"
@@ -73,19 +73,19 @@ msgstr "Blog: Remover suporte"
 
 #: collective/blog/profiles/default/types/BlogTag.xml
 msgid "Blog Tag"
-msgstr ""
+msgstr "Tag"
 
 #: collective/blog/behaviors/configure.zcml:18
 msgid "Blog Tags"
-msgstr ""
+msgstr "Tags"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Categorization by Authors."
-msgstr ""
+msgstr "Categorização por Autores"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Categorization by Tags."
-msgstr ""
+msgstr "Categorização por Tags"
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
@@ -103,11 +103,11 @@ msgstr "Pacote que configura tipos de conteúdo para blogs"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Tag"
-msgstr ""
+msgstr "Tag"
 
 #: collective/blog/interfaces.py:24
 msgid "Tags container inside the Blog"
-msgstr ""
+msgstr "Pasta de tags dentro de um Blog"
 
 #: collective/blog/profiles.zcml:21
 msgid "Uninstall Blog setup."
@@ -162,7 +162,7 @@ msgstr "Habilitamos a criação da pasta de autores dentro do Blog?"
 #. Default: "Should we create the Tags container inside the Blog?"
 #: collective/blog/interfaces.py:25
 msgid "help_enable_tags_folder"
-msgstr ""
+msgstr "Devemos criar uma pasta para armazenar as tags dentro do Blog?"
 
 #. Default: "Authors"
 #: collective/blog/content/post.py:25
@@ -172,7 +172,7 @@ msgstr "Autores"
 #. Default: "Tags"
 #: collective/blog/behaviors/tags.py:21
 msgid "label_blog_tags"
-msgstr ""
+msgstr "Tags"
 
 #. Default: "Rights"
 #: collective/blog/content/post.py:58
@@ -187,14 +187,14 @@ msgstr "Metadados"
 
 #: collective/blog/subscribers/blog.py:20
 msgid "tags_folder_desc"
-msgstr ""
+msgstr "Tags utilizadas neste Blog"
 
 #. Default: "tags"
 #: collective/blog/subscribers/blog.py:18
 msgid "tags_folder_id"
-msgstr ""
+msgstr "tags"
 
 #. Default: "Tags"
 #: collective/blog/subscribers/blog.py:19
 msgid "tags_folder_title"
-msgstr ""
+msgstr "Tags"
