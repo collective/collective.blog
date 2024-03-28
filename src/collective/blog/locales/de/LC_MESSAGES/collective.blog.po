@@ -16,36 +16,36 @@ msgstr ""
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "A Blog Author"
-msgstr " "
+msgstr "Ein Blog Autor"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "A Blog Post"
-msgstr ""
+msgstr "Ein Blogbeitrag"
 
 #: collective/blog/profiles/default/types/BlogTag.xml
 msgid "A Blog tag"
-msgstr ""
+msgstr "Ein Blog tag"
 
 #: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "A folderish content item representing a Blog"
-msgstr ""
+msgstr "Ein ordnerartiger Inhaltstyp, der einen Blog darstellt"
 
 #: collective/blog/behaviors/configure.zcml:18
 msgid "Adds a field to categorize blog posts using tags"
-msgstr ""
+msgstr "Fügt ein Feld zur Kategorisierung von Blogbeiträgen mithilfe von Stichworten hinzu"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: collective/blog/interfaces.py:14
 msgid "Authors container inside the Blog"
-msgstr ""
+msgstr "Autoren Ordner innerhalb des Blogs"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: collective/blog/profiles/default/types/Author.xml
 msgid "Blog Author"
@@ -53,23 +53,23 @@ msgstr "Blog Autor"
 
 #: collective/blog/behaviors/configure.zcml:12
 msgid "Blog Behavior"
-msgstr ""
+msgstr "Blog Verhalten"
 
 #: collective/blog/profiles/default/types/Post.xml
 msgid "Blog Post"
-msgstr ""
+msgstr "Blogbeitrag"
 
 #: collective/blog/controlpanel/controlpanel.py:16
 msgid "Blog Settings"
-msgstr ""
+msgstr "Blog Einstellungen"
 
 #: collective/blog/profiles.zcml:13
 msgid "Blog Support for Plone"
-msgstr ""
+msgstr "Blog Unterstützung für Plone"
 
 #: collective/blog/profiles.zcml:21
 msgid "Blog Support for Plone: Uninstall"
-msgstr ""
+msgstr "Blog Unterstützung für Plone: Deinstallieren"
 
 #: collective/blog/profiles/default/types/BlogTag.xml
 msgid "Blog Tag"
@@ -77,15 +77,15 @@ msgstr "Blog Stichwort"
 
 #: collective/blog/behaviors/configure.zcml:18
 msgid "Blog Tags"
-msgstr ""
+msgstr "Blog Stichworte"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Categorization by Authors."
-msgstr ""
+msgstr "Kategorisierung nach Autoren."
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Categorization by Tags."
-msgstr ""
+msgstr "Kategorisierung nach Stichworten."
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
@@ -95,23 +95,23 @@ msgstr ""
 
 #: collective/blog/behaviors/configure.zcml:12
 msgid "Implements a blog behavior on a content type"
-msgstr ""
+msgstr "Implementiert das Blog-Verhalten für einen Inhaltstyp"
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
-msgstr ""
+msgstr "Paket zur Konfiguration der Blog Inhaltstypen"
 
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 msgid "Tag"
-msgstr ""
+msgstr "Stichwort"
 
 #: collective/blog/interfaces.py:24
 msgid "Tags container inside the Blog"
-msgstr ""
+msgstr "Stichworte Ordner innerhalb des Blogs"
 
 #: collective/blog/profiles.zcml:21
 msgid "Uninstall Blog setup."
-msgstr ""
+msgstr "Blog setup deinstallieren."
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
@@ -137,32 +137,32 @@ msgstr "Autoren"
 #. Default: "Contributors"
 #: collective/blog/content/post.py:42
 msgid "contributors"
-msgstr ""
+msgstr "Beitragende"
 
 #. Default: "Persons responsible for creating the content of this post. Please enter a list of user names, one per line. The principal creator should come first."
 #: collective/blog/content/post.py:26
 msgid "help_authors"
-msgstr ""
+msgstr "Personen, die den Text des Artikels geschrieben haben. Die Person mit dem Hauptbeitrag sollte als erste erscheinen."
 
 #. Default: "The names of people that have contributed to this item. Each contributor should be on a separate line."
 #: collective/blog/content/post.py:43
 msgid "help_contributors"
-msgstr ""
+msgstr "Personen, die Inhalte zum Artikel beigetragen haben."
 
 #. Default: "Copyright statement or other rights information on this item."
 #: collective/blog/content/post.py:59
 msgid "help_copyrights"
-msgstr ""
+msgstr "Urheberrechtserklärung oder andere Informationen über Rechte an diesem Artikel."
 
 #. Default: "Should we create the Authors container inside the Blog?"
 #: collective/blog/interfaces.py:15
 msgid "help_enable_authors_folder"
-msgstr ""
+msgstr "Soll innerhalb des Blogs ein Autoren Ordner erstellt werden?"
 
 #. Default: "Should we create the Tags container inside the Blog?"
 #: collective/blog/interfaces.py:25
 msgid "help_enable_tags_folder"
-msgstr ""
+msgstr "Soll innerhalb des Blogs ein Stichworte Ordner erstellt werden?"
 
 #. Default: "Authors"
 #: collective/blog/content/post.py:25
@@ -177,13 +177,13 @@ msgstr "Stichworte"
 #. Default: "Rights"
 #: collective/blog/content/post.py:58
 msgid "label_copyrights"
-msgstr ""
+msgstr "Urheberrechte"
 
 #. Default: "Metadata"
 #: collective/blog/behaviors/tags.py:17
 #: collective/blog/content/post.py:20
 msgid "label_schema_metadata"
-msgstr ""
+msgstr "Metadaten"
 
 #: collective/blog/subscribers/blog.py:20
 msgid "tags_folder_desc"
