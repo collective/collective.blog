@@ -13,7 +13,7 @@ long_description = f"""
 
 setup(
     name="collective.blog",
-    version="1.0.0a10",
+    version="1.0.0a11.dev0",
     description="A Blog-Addon for Plone.",
     long_description=long_description,
     long_description_content_type="text/markdown",
