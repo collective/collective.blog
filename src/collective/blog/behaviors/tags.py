@@ -20,6 +20,7 @@ class IBlogTags(model.Schema):
         title=_("label_blog_tags", default="Tags"),
         value_type=schema.TextLine(),
         required=False,
+        default=(),
         missing_value=(),
     )
     directives.widget(
