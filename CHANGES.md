@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a11 (2024-04-10)
+
+
+### Bug fixes:
+
+- Fix 'Wrong contained type' error for new blog posts with no tags created using plone.restapi. @davisagli #69
+
 ## 1.0.0a10 (2024-03-28)
 
 

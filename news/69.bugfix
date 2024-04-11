@@ -1,1 +1,0 @@
-Fix 'Wrong contained type' error for new blog posts with no tags created using plone.restapi. @davisagli
