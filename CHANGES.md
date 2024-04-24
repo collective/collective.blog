@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a12 (2024-04-24)
+
+
+### Bug fixes:
+
+- Fix tags widget to not have an open vocabulary, and adjust Volto widget @sneridagh #71
+
 ## 1.0.0a11 (2024-04-10)
 
 
