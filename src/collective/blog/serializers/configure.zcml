@@ -6,11 +6,6 @@
       name="collective.blog.summary_serializer_metadata"
       />
 
-  <!-- Content Type Serializers -->
-  <adapter factory=".author.AuthorJSONSerializer" />
-  <adapter factory=".blog.BlogJSONSerializer" />
-  <adapter factory=".post.PostJSONSerializer" />
-
   <!-- Special serializer for tag vocab terms -->
   <adapter factory=".vocab.SerializeTermWithUrlToJson" />
 
