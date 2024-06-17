@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a13 (2024-06-17)
+
+
+### Bug fixes:
+
+- Remove custom serializers for blog content types. They were serializing preview_image_link in the wrong format. @davisagli #75
+
 ## 1.0.0a12 (2024-04-24)
 
 
