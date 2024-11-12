@@ -15,11 +15,7 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-# Set distributions still in development
-DISTRIBUTIONS="blog"
-ALLOWED_DISTRIBUTIONS="blog"
-
-PLONE6=6.0-latest
+PLONE6=5.2-latest
 
 # Python checks
 PYTHON?=python3
