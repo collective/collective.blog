@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0 (2025-01-16)
+
+
+### Bug fixes:
+
+- Remove unnecessary .gitkeep files which broke the profile in Plone 5. @davisagli #79
+
 ## 1.0.0a13 (2024-06-17)
 
 
