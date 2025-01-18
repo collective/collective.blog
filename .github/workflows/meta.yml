@@ -5,11 +5,11 @@ name: Meta
 on:
   push:
     branches:
-      - master
+      - 0.x
       - main
   pull_request:
     branches:
-      - master
+      - 0.x
       - main
   workflow_dispatch:
 
