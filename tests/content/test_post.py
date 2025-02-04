@@ -100,3 +100,12 @@ class TestPost:
             )
         result = api.content.find(blog_tags=tag.UID())
         assert len(result) == 1
+
+    def test_create_no_authors_by_default(self, portal, posts_payload):
+        blog = self.blog
+        payload = posts_payload[0]
+        with api.env.adopt_roles(["Manager"]):
+            content = api.content.create(container=blog, **payload)
+        assert content.portal_type == CONTENT_TYPE
+        assert isinstance(content, Post)
+        assert content.creators == ()

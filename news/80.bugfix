@@ -1,0 +1,1 @@
+Override addCreator for not setting the default author if not set. @sneridagh
