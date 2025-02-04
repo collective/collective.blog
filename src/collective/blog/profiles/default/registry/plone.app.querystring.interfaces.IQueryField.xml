@@ -30,7 +30,7 @@
   >
     <value key="title"
            i18n:translate=""
-    >Tag</value>
+    >Blog Tag</value>
     <value key="description"
            i18n:translate=""
     >Categorization by Tags.</value>
