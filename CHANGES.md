@@ -9,6 +9,14 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.1 (2025-02-04)
+
+
+### Bug fixes:
+
+- Override addCreator for not setting the default author if not set. @sneridagh #80
+- change tag translation in queryfield. @jnptk #81
+
 ## 1.0.0 (2025-01-16)
 
 
