@@ -75,3 +75,7 @@ class Post(Container):
     def blog_uid(self):
         """Return the uid of the nearest blog object."""
         return utils.find_blog_container_uid(self)
+
+    def addCreator(self, creator=None):
+        """Override the original addCreator for not adding a creator by default."""
+        pass
