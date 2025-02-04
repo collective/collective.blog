@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-03-27 16:56+0000\n"
+"POT-Creation-Date: 2025-02-04 10:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,6 +71,7 @@ msgstr ""
 msgid "Blog Support for Plone: Uninstall"
 msgstr ""
 
+#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 #: collective/blog/profiles/default/types/BlogTag.xml
 msgid "Blog Tag"
 msgstr ""
@@ -99,10 +100,6 @@ msgstr ""
 
 #: collective/blog/profiles.zcml:13
 msgid "Package to configure Blog content types"
-msgstr ""
-
-#: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
-msgid "Tag"
 msgstr ""
 
 #: collective/blog/interfaces.py:24
