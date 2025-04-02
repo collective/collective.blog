@@ -1,11 +1,12 @@
-<p align="center">
-    <img alt="kitconcept GmbH" width="200px" src="https://kitconcept.com/logo.svg">
-</p>
+<div align="center">
+<picture>
+  <source width="200" media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img width="200" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+</picture>
 
 <h1 align="center">collective.blog</h1>
 <h3 align="center">Blog features for Plone</h3>
 
-<div align="center">
 
 [![PyPI](https://img.shields.io/pypi/v/collective.blog)](https://pypi.org/project/collective.blog/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/collective.blog)](https://pypi.org/project/collective.blog/)
