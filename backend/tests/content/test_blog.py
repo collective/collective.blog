@@ -15,7 +15,7 @@ CONTENT_TYPE = "BlogFolder"
 @pytest.fixture
 def blog(blogs: dict) -> Blog:
     """Return a blog instance."""
-    blog_uuid = list(blogs.keys())[0]
+    blog_uuid = next(iter(blogs.keys()))
     blog = api.content.get(UID=blog_uuid)
     return blog
 

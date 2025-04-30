@@ -54,8 +54,8 @@ PERMISSIONS_TAGS = (
 def _translate(msg: Message, lang: str) -> str:
     """Translate the msg to the desired language.
 
-    This is here due to a bug on api.portal.translate that expects the language code to be
-    on a specific format.
+    This is here due to a bug on api.portal.translate that expects
+    the language code to be on a specific format.
     ref: https://github.com/plone/plone.api/issues/524
     """
     if "-" in lang:

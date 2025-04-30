@@ -3,9 +3,9 @@
   <!-- Serializers -->
 
   <utility
-    factory=".summary.JSONSummarySerializerMetadata"
-    name="collective.blog.summary_serializer_metadata"
-  />
+      factory=".summary.JSONSummarySerializerMetadata"
+      name="collective.blog.summary_serializer_metadata"
+      />
 
   <adapter factory=".vocab.SerializeTermWithUrlToJson" />
   <adapter factory=".post.PostAuthorsSerializer" />

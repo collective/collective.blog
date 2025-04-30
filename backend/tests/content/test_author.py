@@ -57,9 +57,11 @@ class TestAuthor:
         """A Blog Author need to be created inside a Blog authors folder."""
         blog = self.blog
         payload = authors_payload[0]
-        with pytest.raises(api.exc.InvalidParameterError) as exc:
-            with api.env.adopt_roles(["Manager"]):
-                api.content.create(container=blog, **payload)
+        with (
+            pytest.raises(api.exc.InvalidParameterError) as exc,
+            api.env.adopt_roles(["Manager"]),
+        ):
+            api.content.create(container=blog, **payload)
         assert "Disallowed subobject type: Author" in str(exc)
 
     def test_indexer_blog(self, portal, authors_payload):

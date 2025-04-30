@@ -3,7 +3,6 @@ from plone.restapi.interfaces import IExpandableElement
 from plone.restapi.interfaces import ISerializeToJsonSummary
 from plone.restapi.services import Service
 from Products.ZCatalog.CatalogBrains import AbstractCatalogBrain
-from typing import List
 from zope.component import adapter
 from zope.component import getMultiAdapter
 from zope.interface import implementer
@@ -22,12 +21,12 @@ class Authors:
         self.context = context
         self.request = request
 
-    def _get_authors_info(self, authors: List[str]) -> List[AbstractCatalogBrain]:
+    def _get_authors_info(self, authors: list[str]) -> list[AbstractCatalogBrain]:
         """Given a list of uids, return a list of brains."""
         brains = api.content.find(portal_type="Author", UID=authors)
         return brains
 
-    def _serialize_brains(self, brains: List[AbstractCatalogBrain]) -> List[dict]:
+    def _serialize_brains(self, brains: list[AbstractCatalogBrain]) -> list[dict]:
         """Serialize Authors information."""
         data = []
         for brain in brains:

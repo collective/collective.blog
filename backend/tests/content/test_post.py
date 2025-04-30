@@ -67,9 +67,8 @@ class TestPost:
         from AccessControl import Unauthorized
 
         payload = posts_payload[0]
-        with pytest.raises(Unauthorized) as exc:
-            with api.env.adopt_roles(["Manager"]):
-                api.content.create(container=portal, **payload)
+        with pytest.raises(Unauthorized) as exc, api.env.adopt_roles(["Manager"]):
+            api.content.create(container=portal, **payload)
         assert "Cannot create Post" in str(exc)
 
     def test_create(self, portal, posts_payload):

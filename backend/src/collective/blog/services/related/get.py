@@ -20,7 +20,7 @@ class GetRelated(Service):
             )
 
             for brain in brains:
-                if brain.UID == context.UID():
+                if context.UID() == brain.UID:
                     continue
 
         return
