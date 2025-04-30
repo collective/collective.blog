@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "backend/**"
+      - "docs/**"
       - "frontend/**"
       - ".github/workflows/backend.yml"
       - ".github/workflows/docs.yml"
