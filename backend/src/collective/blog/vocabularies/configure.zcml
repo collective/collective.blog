@@ -1,0 +1,14 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <utility
+      name="collective.blog.authors"
+      component=".authors.authors_vocabulary"
+      />
+  <utility
+      name="collective.blog.tags"
+      component=".tags.tags_vocabulary"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

@@ -1,0 +1,65 @@
+body.contenttype-post {
+  .post.head-title {
+    max-width: var(--default-container-width);
+    padding-top: 25px;
+    padding-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    > span {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 34px;
+    }
+  }
+
+  .blocks-group-wrapper {
+    padding-top: 0;
+  }
+
+  .tags-container {
+    display: flex;
+    max-width: var(--default-container-width);
+    align-items: center;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+
+    > strong {
+      margin-right: 25px;
+    }
+
+    .tags-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag-item {
+      padding: 12px;
+      border: 1px solid #000;
+      background: #000;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  .about-the-author {
+    max-width: var(--default-container-width);
+    margin-right: auto;
+    margin-left: auto;
+
+    figure.author-profile {
+      flex-direction: row;
+    }
+  }
+}

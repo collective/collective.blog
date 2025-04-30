@@ -1,0 +1,13 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Serializers -->
+
+  <utility
+    factory=".summary.JSONSummarySerializerMetadata"
+    name="collective.blog.summary_serializer_metadata"
+  />
+
+  <adapter factory=".vocab.SerializeTermWithUrlToJson" />
+  <adapter factory=".post.PostAuthorsSerializer" />
+
+</configure>
