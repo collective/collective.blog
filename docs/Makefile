@@ -58,6 +58,9 @@ html: .venv/bin/python  ## Build html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
+.PHONY: build
+build: html ## Build html
+
 .PHONY: livehtml
 livehtml: .venv/bin/python  ## Rebuild Sphinx documentation on changes, with live-reload in the browser
 	cd "$(DOCS_DIR)" && ${SPHINXAUTOBUILD} \

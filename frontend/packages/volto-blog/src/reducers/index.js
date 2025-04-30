@@ -1,4 +1,4 @@
-import authors from 'volto-blog/reducers/authors/authors';
+import authors from '@plone-collective/volto-blog/reducers/authors/authors';
 
 const reducers = {
   authors,

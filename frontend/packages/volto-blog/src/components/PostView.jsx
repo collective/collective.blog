@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getAuthors } from 'volto-blog/actions/authors';
+import { getAuthors } from '@plone-collective/volto-blog/actions/authors';
 
 /**
  * PostView view component class.

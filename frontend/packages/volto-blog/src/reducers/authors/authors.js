@@ -1,4 +1,4 @@
-import GET_AUTHORS from 'volto-blog/actions/authors';
+import GET_AUTHORS from '@plone-collective/volto-blog/actions/authors';
 
 const initialState = {
   loaded: false,
