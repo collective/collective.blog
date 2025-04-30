@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="plone">
+
+  <records
+    interface="plone.app.querystring.interfaces.IQueryOperation"
+    prefix="collective.blog.operation.selection.currentUID"
+  >
+    <value key="title" i18n:translate="">Current</value>
+    <value key="description" i18n:translate="">The current Object UID</value>
+    <value key="operation">collective.blog.queryparser._currentUID</value>
+    <value key="widget" />
+  </records>
+
+</registry>
