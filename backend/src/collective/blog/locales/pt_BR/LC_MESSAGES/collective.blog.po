@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-02-04 10:26+0000\n"
+"POT-Creation-Date: 2025-04-30 14:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "Adiciona um campo para categorizar posts utilizando tags"
 msgid "Author"
 msgstr "Autor/Autora"
 
-#: collective/blog/interfaces.py:14
+#: collective/blog/interfaces.py:15
 msgid "Authors container inside the Blog"
 msgstr "Pasta contendo autores dentro de um Blog"
 
@@ -63,14 +63,6 @@ msgstr "Postagem"
 msgid "Blog Settings"
 msgstr "Configurações do Blog"
 
-#: collective/blog/profiles.zcml:13
-msgid "Blog Support for Plone"
-msgstr "Blog suporte para Plone"
-
-#: collective/blog/profiles.zcml:21
-msgid "Blog Support for Plone: Uninstall"
-msgstr "Blog: Remover suporte"
-
 #: collective/blog/profiles/default/registry/plone.app.querystring.interfaces.IQueryField.xml
 #: collective/blog/profiles/default/types/BlogTag.xml
 msgid "Blog Tag"
@@ -88,6 +80,10 @@ msgstr "Categorização por Autores"
 msgid "Categorization by Tags."
 msgstr "Categorização por Tags"
 
+#: collective/blog/profiles.zcml:22
+msgid "Create example content to showcase the new website"
+msgstr ""
+
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
 #: collective/blog/profiles/default/types/BlogTag.xml
@@ -99,16 +95,16 @@ msgid "Implements a blog behavior on a content type"
 msgstr "Implementa o comportamento de blog para um tipo de conteúdo"
 
 #: collective/blog/profiles.zcml:13
-msgid "Package to configure Blog content types"
-msgstr "Pacote que configura tipos de conteúdo para blogs"
+msgid "Package to configure a new collective.blog site"
+msgstr ""
 
-#: collective/blog/interfaces.py:24
+#: collective/blog/interfaces.py:25
 msgid "Tags container inside the Blog"
 msgstr "Pasta de tags dentro de um Blog"
 
-#: collective/blog/profiles.zcml:21
-msgid "Uninstall Blog setup."
-msgstr "Remover suporte a Blogs"
+#: collective/blog/profiles.zcml:30
+msgid "Uninstall collective.blog setup."
+msgstr ""
 
 #: collective/blog/profiles/default/types/Author.xml
 #: collective/blog/profiles/default/types/BlogFolder.xml
@@ -131,6 +127,18 @@ msgstr "autores"
 msgid "authors_folder_title"
 msgstr "Autores"
 
+#: collective/blog/profiles.zcml:22
+msgid "collective.blog: Example content"
+msgstr ""
+
+#: collective/blog/profiles.zcml:13
+msgid "collective.blog: Install"
+msgstr ""
+
+#: collective/blog/profiles.zcml:30
+msgid "collective.blog: Uninstall"
+msgstr ""
+
 #. Default: "Contributors"
 #: collective/blog/content/post.py:42
 msgid "contributors"
@@ -152,12 +160,12 @@ msgid "help_copyrights"
 msgstr "Informações sobre direitos autorais desta postagem."
 
 #. Default: "Should we create the Authors container inside the Blog?"
-#: collective/blog/interfaces.py:15
+#: collective/blog/interfaces.py:16
 msgid "help_enable_authors_folder"
 msgstr "Habilitamos a criação da pasta de autores dentro do Blog?"
 
 #. Default: "Should we create the Tags container inside the Blog?"
-#: collective/blog/interfaces.py:25
+#: collective/blog/interfaces.py:26
 msgid "help_enable_tags_folder"
 msgstr "Devemos criar uma pasta para armazenar as tags dentro do Blog?"
 
