@@ -36,7 +36,7 @@
     <value key="operations">
       <element>plone.app.querystring.operation.selection.any</element>
       <element>plone.app.querystring.operation.selection.all</element>
-      <element>collective.blog.operation.selection.currentUID</element>
+      <element>plone.app.querystring.operation.currentUID</element>
     </value>
     <value key="vocabulary">collective.blog.tags</value>
   </records>

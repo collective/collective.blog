@@ -1,7 +1,7 @@
 {
-  "name": "volto-blog",
+  "name": "@plone-collective/volto-blog",
   "version": "1.0.0-alpha.0",
-  "description": "`collective.blog` adds blogging features to a Plone site.",
+  "description": "@plone-collective/volto-blog adds blogging features to a Plone site.",
   "main": "src/index.js",
   "license": "MIT",
   "keywords": [
@@ -26,13 +26,14 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
+  "addons": [],
   "dependencies": {},
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.6.1",
+    "@plone/scripts": "workspace:*",
     "release-it": "^17.1.1"
   }
 }

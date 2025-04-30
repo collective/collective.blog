@@ -24,7 +24,7 @@ publish = false
 path = "frontend"
 
 [frontend.package]
-name = "volto-blog"
+name = "@plone-collective/volto-blog"
 path = "frontend/packages/volto-blog"
 changelog = "frontend/packages/volto-blog/CHANGELOG.md"
 towncrier_settings = "frontend/packages/volto-blog/towncrier.toml"

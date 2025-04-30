@@ -1,5 +1,5 @@
-const addons = ['volto-blog', '@kitconcept/volto-light-theme'];
-const theme = '@kitconcept/volto-light-theme';
+const addons = ['@plone-collective/volto-blog'];
+const theme = '';
 
 module.exports = {
   addons,

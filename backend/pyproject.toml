@@ -4,7 +4,7 @@ dynamic = ["version"]
 description = "collective.blog adds blogging features to a Plone site."
 readme = "README.md"
 license = "GPL-2.0-only"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 authors = [{ name = "kitconcept GmbH", email = "info@kitconcept.com" }]
 keywords = ["CMS", "Plone", "Python"]
 classifiers = [
@@ -16,10 +16,13 @@ classifiers = [
     "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-    "Products.CMFPlone==6.1.1",
+    "Products.CMFPlone",
     "plone.api",
     "plone.restapi",
     "plone.volto",
@@ -32,7 +35,7 @@ test = [
     "plone.restapi[test]",
     "pytest",
     "pytest-cov",
-    "pytest-plone>=0.5.0",
+    "pytest-plone>=1.0.0a1",
 ]
 
 [project.urls]
@@ -70,7 +73,7 @@ filename = "CHANGELOG.md"
 start_string = "<!-- towncrier release notes start -->\n"
 title_format = "## {version} ({project_date})"
 template = "news/.changelog_template.jinja"
-issue_format = "[#{issue}](https://github.com/kitconcept/collective.blog/issues/{issue})"
+issue_format = "[#{issue}](https://github.com/collective/collective.blog/issues/{issue})"
 underlines = ["", "", ""]
 
 [[tool.towncrier.type]]

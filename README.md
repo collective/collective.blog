@@ -8,9 +8,7 @@
 <h3 align="center">Blog features for Plone</h3>
 
 [![Built with Cookieplone](https://img.shields.io/badge/built%20with-Cookieplone-0083be.svg?logo=cookiecutter)](https://github.com/plone/cookieplone-templates/)
-[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Backend Tests](https://github.com/kitconcept/collective.blog/actions/workflows/backend.yml/badge.svg)](https://github.com/kitconcept/collective.blog/actions/workflows/backend.yml)
-[![Frontend Tests](https://github.com/kitconcept/collective.blog/actions/workflows/frontend.yml/badge.svg)](https://github.com/kitconcept/collective.blog/actions/workflows/frontend.yml)
+[![CI](https://github.com/collective/collective.blog/actions/workflows/ci.yml/badge.svg)](https://github.com/collective/collective.blog/actions/workflows/ci.yml)
 
 </div>
 
@@ -62,28 +60,28 @@ To install your project, you must choose the method appropriate to your version 
 
 #### Volto 18 and later
 
-Add `@collective/volto-blog` to your `package.json`:
+Add `@plone-collective/volto-blog` to your `package.json`:
 
 ```json
 "dependencies": {
-    "@collective/volto-blog": "*"
+    "@plone-collective/volto-blog": "*"
 }
 ```
 
-Add `@collective/volto-blog` to your `volto.config.js`:
+Add `@plone-collective/volto-blog` to your `volto.config.js`:
 
 ```javascript
-const addons = ['@collective/volto-blog'];
+const addons = ['@plone-collective/volto-blog'];
 ```
 
 
 #### Volto 17 and earlier
 
-Add `@collective/volto-blog` to your package.json:
+Add `@plone-collective/volto-blog` to your package.json:
 
 ```json
 "addons": [
-    "@collective/volto-blog"
+    "@plone-collective/volto-blog"
 ],
 ```
 
@@ -110,7 +108,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
 ```shell
-git clone git@github.com:kitconcept/collective.blog.git
+git clone git@github.com:collective/collective.blog.git
 cd collective.blog
 ```
 
@@ -215,8 +213,8 @@ make i18n
 
 The development of this add-on has been kindly sponsored by [German Aerospace Center (DLR)](https://www.dlr.de) and [Forschungszentrum Jülich](https://www.fz-juelich.de).
 
-<img alt="German Aerospace Center (DLR)" width="200px" src="https://raw.githubusercontent.com/collective/collective.blog/main/assets/dlr.svg" style="background-color:white">
-<img alt="Forschungszentrum Jülich" width="200px" src="https://raw.githubusercontent.com/collective/collective.blog/main/assets/fz-juelich.svg" style="background-color:white">
+<img alt="German Aerospace Center (DLR)" width="200px" src="https://raw.githubusercontent.com/collective/collective.blog/main/docs/docs/_static/dlr.svg" style="background-color:white">
+<img alt="Forschungszentrum Jülich" width="200px" src="https://raw.githubusercontent.com/collective/collective.blog/main/docs/docs/_static/fz-juelich.svg" style="background-color:white">
 
 Made with ❤️ by [kitconcept](https://www.kitconcept.com/)
 

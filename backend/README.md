@@ -50,8 +50,8 @@ See also the documentation of [Mockup and Patternslib](https://6.docs.plone.org/
 
 ## Contribute
 
-- [Issue Tracker](https://github.com/kitconcept/collective.blog/issues)
-- [Source Code](https://github.com/kitconcept/collective.blog/)
+- [Issue Tracker](https://github.com/collective/collective.blog/issues)
+- [Source Code](https://github.com/collective/collective.blog/)
 
 ## License
 

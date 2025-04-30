@@ -35,7 +35,7 @@
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "volto-blog": "workspace:*",
+    "@plone-collective/volto-blog": "workspace:*",
     "@kitconcept/volto-light-theme": "6.0.0-alpha.21"
   },
   "devDependencies": {

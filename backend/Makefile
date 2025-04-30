@@ -15,7 +15,7 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-IMAGE_NAME_PREFIX=ghcr.io/kitconcept/collective.blog
+IMAGE_NAME_PREFIX=ghcr.io/collective/collective.blog
 IMAGE_TAG=latest
 
 # Python checks
@@ -28,11 +28,15 @@ endif
 
 PLONE_SITE_ID=Plone
 BACKEND_FOLDER=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-PLONE_VERSION=$(shell cat $(BACKEND_FOLDER)/version.txt)
 EXAMPLE_CONTENT_FOLDER=${BACKEND_FOLDER}/src/collective/blog/setuphandlers/examplecontent
-
 VENV_FOLDER=$(BACKEND_FOLDER)/.venv
 BIN_FOLDER=$(VENV_FOLDER)/bin
+
+ifdef PLONE_VERSION
+PLONE_VERSION := $(PLONE_VERSION)
+else
+PLONE_VERSION := $(shell cat $(BACKEND_FOLDER)/version.txt)
+endif
 
 # Environment variables to be exported
 export PYTHONWARNINGS := ignore
