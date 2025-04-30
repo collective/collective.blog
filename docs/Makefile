@@ -37,6 +37,9 @@ help:  # This help message
 sync:  ## Sync package requirements
 	@uv sync
 
+.PHONY: install
+install:  sync
+
 .PHONY: init
 init: clean clean-python .venv/bin/python  ## Clean docs build directory and Python, and initialize Python virtual environment
 
