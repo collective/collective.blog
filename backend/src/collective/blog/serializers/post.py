@@ -1,11 +1,11 @@
 from collective.blog.content.post import IPost
+from persistent.mapping import PersistentMapping
 from plone import api
 from plone.restapi.interfaces import ISerializeToJson
 from plone.restapi.serializer.dxcontent import SerializeFolderToJson
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
-from persistent.mapping import PersistentMapping
 
 
 @implementer(ISerializeToJson)
