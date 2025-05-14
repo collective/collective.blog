@@ -50,7 +50,6 @@ const PostView = ({ content }) => {
       )}
       {content?.post_authors.map((author) => (
         <div key={author['@id']}>
-          {console.log(author)}
           <div className="about-the-author">
             <h2 className="heading">
               <FormattedMessage id="About" defaultMessage="About" />
