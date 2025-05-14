@@ -5,12 +5,13 @@ from plone.restapi.serializer.dxcontent import SerializeFolderToJson
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
+from persistent.mapping import PersistentMapping
 
 
 @implementer(ISerializeToJson)
 @adapter(IPost, Interface)
 class PostAuthorsSerializer(SerializeFolderToJson):
-    """Custom serializer for Award content type."""
+    """Custom serializer for Post content type."""
 
     def __call__(self, **kwargs):
         result = super().__call__(**kwargs)
@@ -21,9 +22,22 @@ class PostAuthorsSerializer(SerializeFolderToJson):
         for uid in self.context.creators:
             brain = brains_by_uid.get(uid)
             if brain:
+                # Convert PersistentMapping to Python dict
+                image_scales = {}
+                if isinstance(brain.image_scales, PersistentMapping):
+                    image_scales = {
+                        key: [
+                            dict(scale) if isinstance(scale, dict) else scale
+                            for scale in value
+                        ]
+                        for key, value in brain.image_scales.items()
+                    }
+
                 authors.append({
+                    "@id": brain.getURL(),
                     "title": brain.Title,
-                    "url": brain.getURL(),
+                    "description": brain.Description,
+                    "image_scales": image_scales,
                 })
 
         result["post_tags"] = tags = []
@@ -35,8 +49,8 @@ class PostAuthorsSerializer(SerializeFolderToJson):
             brain = brains_by_uid.get(uid)
             if brain:
                 tags.append({
+                    "@id": brain.getURL(),
                     "title": brain.Title,
-                    "url": brain.getURL(),
                 })
 
         return result
