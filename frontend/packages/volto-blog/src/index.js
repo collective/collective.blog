@@ -10,6 +10,30 @@ const applyConfig = (config) => {
 
   config.views.contentTypesViews.Post = PostView;
 
+  config.blocks.initialBlocks.BlogTag = [
+    { '@type': 'title' },
+    {
+      '@type': 'search',
+      listingBodyTemplate: 'summary',
+      query: {
+        query: [
+          {
+            i: 'portal_type',
+            o: 'plone.app.querystring.operation.selection.any',
+            v: ['Post'],
+          },
+          {
+            i: 'blog_tags',
+            o: 'plone.app.querystring.operation.currentUID',
+            v: '',
+          },
+        ],
+        sort_on: 'effective',
+        sort_order: 'descending',
+      },
+    },
+  ];
+
   return config;
 };
 
