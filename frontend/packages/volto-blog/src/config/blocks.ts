@@ -41,13 +41,18 @@ export default function install(config: ConfigType) {
             o: 'plone.app.querystring.operation.selection.any',
             v: ['Post'],
           },
+          {
+            i: 'Creator',
+            o: 'plone.app.querystring.operation.currentUID',
+            v: '',
+          },
         ],
         sort_on: 'effective',
         sort_order: 'descending',
       },
       styles: {},
       theme: 'default',
-      variation: 'default',
+      variation: 'summary',
     },
   ];
 
