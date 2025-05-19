@@ -12,6 +12,12 @@
 
 </div>
 
+> [!WARNING]
+> This add-on is meant to be used in combination with the [volto-light-theme](https://github.com/kitconcept/volto-light-theme). If you plan to use this add-on with plain Volto you will have to write your own styles for it. You can use the existing ones via manual import in your config file like this `import "@kitconcept/volto-carousel/theme/_main.scss"` or as reference.
+
+> [!WARNING]
+> This add-on customizes the `vocabularies` and `querystring` actions to ensure tags and authors are scoped per blog. Since multiple blogs are supported, these actions now retrieve data based on the current context. This change is marked as breaking in Volto. If you have customited other components relying on these actions, it may cause compatibility issues.
+
 ## Features
 
 `collective.blog` adds blogging features to a [Plone](https://plone.org/) site.
@@ -51,7 +57,7 @@ Also, add `collective.blog` to your package's `configure.zcml` (or `dependencies
 To automatically enable this package when your add-on is installed, add the following line inside the package's `profiles/default/metadata.xml` `dependencies` element:
 
 ```xml
-    <dependency>profile-collective.blog:default</dependency>
+<dependency>profile-collective.blog:default</dependency>
 ```
 
 ### Frontend
