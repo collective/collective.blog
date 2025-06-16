@@ -1,7 +1,6 @@
-import type { ConfigType } from '@plone/registry';
-
 import PostView from './components/PostView';
 
+import type { ConfigType } from '@plone/registry';
 import installBlocks from './config/blocks';
 
 const applyConfig = (config: ConfigType) => {
