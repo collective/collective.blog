@@ -38,6 +38,7 @@ class PostAuthorsSerializer(SerializeFolderToJson):
                     "title": brain.Title,
                     "description": brain.Description,
                     "image_scales": image_scales,
+                    "image_field": brain.image_field,
                 })
 
         result["post_tags"] = tags = []
