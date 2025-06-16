@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.blog"
+    >
+
+  <!-- Control Panel adapter-->
+  <adapter
+      factory=".controlpanel.BlogConfigletPanel"
+      name="blog-controlpanel"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

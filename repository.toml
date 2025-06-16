@@ -1,0 +1,37 @@
+[repository]
+name = "collective.blog"
+managed_by_uv = false
+changelog = "CHANGELOG.md"
+version = "version.txt"
+compose = "docker-compose.yml"
+
+[repository.towncrier]
+section = "Project"
+settings = "towncrier.toml"
+
+[backend]
+path = "backend"
+
+[backend.package]
+name = "collective.blog"
+path = "backend"
+changelog = "backend/CHANGELOG.md"
+towncrier_settings = "backend/pyproject.toml"
+base_package = "Products.CMFPlone"
+publish = false
+
+[frontend]
+path = "frontend"
+
+[frontend.package]
+name = "@plone-collective/volto-blog"
+path = "frontend/packages/volto-blog"
+changelog = "frontend/packages/volto-blog/CHANGELOG.md"
+towncrier_settings = "frontend/packages/volto-blog/towncrier.toml"
+base_package = "@plone/volto"
+publish = false
+
+[cookieplone]
+template = "project"
+template_version = "563c3248e56fcf91750ce26e8331256f66137f87"
+generated_date = "2025-04-17 09:05:21"
